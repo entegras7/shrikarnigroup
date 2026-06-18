@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Shri Karni Group | Leadership, Vision, Mission & Policies</title>
+  <meta name="description" content="Learn about the Shri Karni Group of Companies — Director's message, vision, mission, environmental policy, and health & safety policy." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.shrikarnigroup.com/about/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Shri Karni Group of Companies",
+    "url": "https://www.shrikarnigroup.com/about/",
+    "description": "Director's message, vision, mission, and corporate policies of Shri Karni Group of Companies."
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../shared.css" />
+
+  <style>
+    /* Page hero — no full-bleed image, typographic focus */
+    .page-hero {
+      background: linear-gradient(150deg, var(--ink) 0%, #2D2D50 100%);
+      padding: 7rem 0 4rem; margin-top: 70px;
+      position: relative; overflow: hidden;
+    }
+    .page-hero::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+    .page-hero h1 { color: var(--white); margin-bottom: 1rem; }
+    .page-hero p { color: rgba(255,255,255,.65); max-width: 54ch; font-size: 1.05rem; }
+
+    /* Director section */
+    .director-grid {
+      display: grid; grid-template-columns: 280px 1fr; gap: 4rem; align-items: start;
+    }
+    .director-card {
+      position: sticky; top: 90px;
+      text-align: center;
+    }
+    .director-photo-wrap {
+      width: 200px; height: 240px; margin: 0 auto 1.5rem;
+      border-radius: 8px; overflow: hidden;
+      border: 3px solid var(--gold);
+      background: var(--surface);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-head); font-size: 4rem; color: var(--gold);
+    }
+    .director-card h3 { font-size: 1.15rem; margin-bottom: .25rem; }
+    .director-card p { font-size: .82rem; color: var(--ink-light); }
+    .director-msg h2 { margin-bottom: 1rem; }
+    .director-msg p { margin-bottom: 1.25rem; }
+    .director-msg blockquote {
+      border-left: 3px solid var(--gold); padding-left: 1.5rem;
+      font-family: var(--font-head); font-size: 1.2rem;
+      font-style: italic; color: var(--ink); margin: 2rem 0;
+      line-height: 1.5;
+    }
+    .director-sign {
+      margin-top: 2rem; padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .director-sign strong { display: block; font-size: 1rem; margin-bottom: .2rem; }
+    .director-sign span { font-size: .82rem; color: var(--ink-light); }
+
+    /* Vision / Mission */
+    .vm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .vm-card {
+      border-radius: 10px; padding: 2.5rem;
+      position: relative; overflow: hidden;
+    }
+    .vm-card.vision { background: linear-gradient(135deg, #0D2B6E 0%, #0047AB 100%); }
+    .vm-card.mission { background: linear-gradient(135deg, #0A3210 0%, #1B5E20 100%); }
+    .vm-card h3 { color: var(--white); font-size: 1.5rem; margin-bottom: 1.25rem; }
+    .vm-card p { color: rgba(255,255,255,.75); font-size: .925rem; }
+    .vm-card ul { margin-top: 1rem; display: flex; flex-direction: column; gap: .6rem; }
+    .vm-card ul li {
+      color: rgba(255,255,255,.75); font-size: .9rem;
+      padding-left: 1.5rem; position: relative;
+    }
+    .vm-card ul li::before {
+      content: '✦'; position: absolute; left: 0;
+      color: var(--gold); font-size: .7rem; top: .2rem;
+    }
+    .vm-deco {
+      position: absolute; bottom: -1rem; right: 1rem;
+      font-family: var(--font-head); font-size: 7rem;
+      color: rgba(255,255,255,.05); line-height: 1;
+      pointer-events: none;
+    }
+
+    /* Values */
+    .values-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem;
+    }
+    .value-card {
+      padding: 1.75rem; border: 1px solid var(--border);
+      border-radius: 8px; background: var(--white);
+      transition: border-color .2s, transform .2s;
+    }
+    .value-card:hover { border-color: var(--gold); transform: translateY(-3px); }
+    .value-icon {
+      width: 44px; height: 44px; background: var(--gold-pale);
+      border-radius: var(--radius); display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    .value-card h4 { margin-bottom: .4rem; font-family: var(--font-head); font-size: 1.05rem; }
+    .value-card p { font-size: .875rem; }
+
+    /* Policy cards */
+    .policy-tabs {
+      display: flex; gap: .75rem; flex-wrap: wrap; margin-bottom: 2rem;
+    }
+    .policy-tab {
+      padding: .5rem 1.25rem; border-radius: 999px;
+      border: 1.5px solid var(--border); background: transparent;
+      font-size: .85rem; font-weight: 600; cursor: pointer; color: var(--ink-mid);
+      transition: all .2s;
+    }
+    .policy-tab.active { background: var(--gold); border-color: var(--gold); color: var(--white); }
+    .policy-panel { display: none; }
+    .policy-panel.active { display: block; }
+    .policy-content {
+      background: var(--surface); border-radius: 8px; padding: 2.5rem;
+      border-left: 4px solid var(--gold);
+    }
+    .policy-content h3 { margin-bottom: 1rem; }
+    .policy-content p { margin-bottom: 1rem; }
+    .policy-content ul { display: flex; flex-direction: column; gap: .6rem; margin: 1rem 0 1.25rem; }
+    .policy-content ul li {
+      padding-left: 1.5rem; position: relative; font-size: .9rem; color: var(--ink-mid);
+    }
+    .policy-content ul li::before {
+      content: '▸'; position: absolute; left: 0; color: var(--gold);
+    }
+
+    @media (max-width: 900px) {
+      .director-grid { grid-template-columns: 1fr; }
+      .director-card { position: static; }
+      .vm-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header id="site-header" role="banner">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Primary navigation">
+        <a href="../index.html" class="logo-wrap" aria-label="Shri Karni Group home">
+          <span class="logo-main">Shri Karni <span>Group</span></span>
+          <span class="logo-sub">of Companies</span>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="#directors-message">Director's Message</a></li>
+          <li><a href="#vision-mission">Vision & Mission</a></li>
+          <li><a href="#values">Values</a></li>
+          <li><a href="#policies">Policies</a></li>
+          <li><a href="../electrotech/index.html" class="nav-pill nav-pill-et">Electrotech</a></li>
+          <li><a href="../infrastructure/index.html" class="nav-pill nav-pill-inf">Infrastructure</a></li>
+          <li><a href="../contact/index.html" class="btn btn-primary btn-sm">Contact Us</a></li>
+        </ul>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <a href="#directors-message">Director's Message</a>
+      <a href="#vision-mission">Vision & Mission</a>
+      <a href="#values">Our Values</a>
+      <a href="#policies">Policies</a>
+      <div class="mob-divider">Our Entities</div>
+      <a href="../electrotech/index.html">Shri Karni Electrotech →</a>
+      <a href="../infrastructure/index.html">Shri Karni Infrastructure →</a>
+      <a href="../contact/index.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container">
+      <nav aria-label="Breadcrumb" style="margin-bottom:1.5rem;">
+        <ol style="display:flex;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.4);list-style:none;">
+          <li><a href="../index.html" style="color:var(--gold);">Shri Karni Group</a></li>
+          <li style="opacity:.5;">/</li>
+          <li style="color:rgba(255,255,255,.7);" aria-current="page">About</li>
+        </ol>
+      </nav>
+      <span class="eyebrow">Our Story</span>
+      <h1>Leadership, Values & Corporate Policies</h1>
+      <p>The principles that guide Shri Karni Group of Companies — from how we lead to how we work on site every day.</p>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- DIRECTOR'S MESSAGE -->
+    <section id="directors-message" class="section" aria-labelledby="director-heading">
+      <div class="container">
+        <div class="director-grid">
+          <div class="director-card" data-reveal>
+            <div class="director-photo-wrap" role="img" aria-label="Director photograph">✦</div>
+            <h3>[Director Name]</h3>
+            <p>Managing Director<br/>Shri Karni Group of Companies</p>
+          </div>
+          <div class="director-msg" data-reveal>
+            <span class="eyebrow">Director's Message</span>
+            <h2 id="director-heading">A Message from Our Managing Director</h2>
+            <hr class="gold-rule" aria-hidden="true" />
+            <p>Dear Clients, Partners, and Well-Wishers,</p>
+            <p>[Replace this with the actual Director's message from the company profile. This section should reflect the MD's personal vision for the company, the journey so far, the values the group stands by, and the direction going forward.]</p>
+            <blockquote>
+              "[Insert a key quote from the Director that captures the company's core philosophy — something that speaks to quality, integrity, or the group's ambition.]"
+            </blockquote>
+            <p>[Continue the message here. Talk about the founding story, key milestones, how the group evolved into two specialist entities, and what clients can expect when they work with Shri Karni Group.]</p>
+            <p>[Close with a forward-looking statement — the group's commitment to its clients, its people, and the infrastructure of India.]</p>
+            <div class="director-sign">
+              <strong>[Director Name]</strong>
+              <span>Managing Director, Shri Karni Group of Companies</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISION & MISSION -->
+    <section id="vision-mission" class="section section--alt" aria-labelledby="vm-heading">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <span class="eyebrow">Our Purpose</span>
+          <h2 id="vm-heading">Vision & Mission</h2>
+          <hr class="gold-rule gold-rule--center" aria-hidden="true" />
+        </div>
+        <div class="vm-grid">
+          <div class="vm-card vision" data-reveal>
+            <h3>Our Vision</h3>
+            <p>[Replace with the company's actual vision statement from the profile — typically a concise aspirational statement about where the group aims to be.]</p>
+            <ul>
+              <li>To be the most trusted name in airport electrical and civil contracting in India</li>
+              <li>To set benchmarks for quality and safety in aviation infrastructure</li>
+              <li>To deliver works that serve the nation for decades to come</li>
+            </ul>
+            <div class="vm-deco" aria-hidden="true">V</div>
+          </div>
+          <div class="vm-card mission" data-reveal>
+            <h3>Our Mission</h3>
+            <p>[Replace with the company's actual mission statement — a more operational statement about how the group delivers on its vision day to day.]</p>
+            <ul>
+              <li>Execute every project to the highest technical and safety standards</li>
+              <li>Build long-term relationships with clients through transparency and reliability</li>
+              <li>Continuously invest in our people, equipment, and capabilities</li>
+              <li>Deliver on time, within budget, without compromising on quality</li>
+            </ul>
+            <div class="vm-deco" aria-hidden="true">M</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section id="values" class="section" aria-labelledby="values-heading">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <span class="eyebrow">What We Stand For</span>
+          <h2 id="values-heading">Our Core Values</h2>
+          <hr class="gold-rule gold-rule--center" aria-hidden="true" />
+        </div>
+        <div class="values-grid">
+          <div class="value-card" data-reveal>
+            <div class="value-icon" aria-hidden="true">🏗</div>
+            <h4>Quality Without Compromise</h4>
+            <p>Every project is executed to specification. We don't cut corners — in aviation infrastructure, there is no margin for it.</p>
+          </div>
+          <div class="value-card" data-reveal>
+            <div class="value-icon" aria-hidden="true">🤝</div>
+            <h4>Client Partnership</h4>
+            <p>We treat every client relationship as a long-term partnership — transparent, communicative, and accountable at every stage.</p>
+          </div>
+          <div class="value-card" data-reveal>
+            <div class="value-icon" aria-hidden="true">🛡</div>
+            <h4>Safety First</h4>
+            <p>Safety is non-negotiable — for our teams, for airport operations, and for the end users of infrastructure we build.</p>
+          </div>
+          <div class="value-card" data-reveal>
+            <div class="value-icon" aria-hidden="true">⏱</div>
+            <h4>On-Time Delivery</h4>
+            <p>Airport clients cannot afford delays. Our scheduling, equipment ownership, and project management ensure we deliver as committed.</p>
+          </div>
+          <div class="value-card" data-reveal>
+            <div class="value-icon" aria-hidden="true">🌱</div>
+            <h4>Environmental Responsibility</h4>
+            <p>We operate with minimal environmental footprint — following all statutory requirements and our own internal environmental standards.</p>
+          </div>
+          <div class="value-card" data-reveal>
+            <div class="value-icon" aria-hidden="true">📈</div>
+            <h4>Continuous Improvement</h4>
+            <p>We invest in training, technology, and systems to keep improving the quality, speed, and sustainability of our work.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POLICIES -->
+    <section id="policies" class="section section--alt" aria-labelledby="policies-heading">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Corporate Policies</span>
+          <h2 id="policies-heading">Our Commitment in Writing</h2>
+          <hr class="gold-rule" aria-hidden="true" />
+          <p class="lead">Formal policies that govern how we operate — on site, in our offices, and in relation to the environment and our people.</p>
+        </div>
+
+        <div data-reveal>
+          <div class="policy-tabs" role="tablist" aria-label="Policy tabs">
+            <button class="policy-tab active" role="tab" aria-selected="true"  aria-controls="policy-quality"    data-policy="quality">Quality Policy</button>
+            <button class="policy-tab"        role="tab" aria-selected="false" aria-controls="policy-env"        data-policy="env">Environmental Policy</button>
+            <button class="policy-tab"        role="tab" aria-selected="false" aria-controls="policy-health"     data-policy="health">Health & Safety Policy</button>
+            <button class="policy-tab"        role="tab" aria-selected="false" aria-controls="policy-hr"         data-policy="hr">HR & Equal Opportunity</button>
+          </div>
+
+          <!-- Quality -->
+          <div class="policy-panel active" id="policy-quality" role="tabpanel">
+            <div class="policy-content">
+              <h3>Quality Policy</h3>
+              <p>[Replace with the actual quality policy from the company profile. Below is a placeholder structure.]</p>
+              <p>Shri Karni Group of Companies is committed to delivering electrical and civil infrastructure works that consistently meet or exceed the requirements of our clients, regulatory authorities, and applicable standards including AAI, CPWD, IRC, and IS specifications.</p>
+              <p>We achieve this through:</p>
+              <ul>
+                <li>Maintaining ISO 9001:2015 certified quality management systems across both entities</li>
+                <li>In-house testing and quality assurance at every stage of construction</li>
+                <li>Competent, trained, and supervised workforce at all levels</li>
+                <li>Regular internal audits and management reviews to drive continual improvement</li>
+                <li>Zero-defect handover as the standard — not the exception</li>
+              </ul>
+              <p>This policy is communicated to all employees, reviewed annually, and forms the foundation of every project we undertake.</p>
+              <p style="margin-top:1.5rem;font-size:.82rem;color:var(--ink-light);">Signed: [Director Name], Managing Director &nbsp;|&nbsp; Date: [Policy Date]</p>
+            </div>
+          </div>
+
+          <!-- Environmental -->
+          <div class="policy-panel" id="policy-env" role="tabpanel">
+            <div class="policy-content">
+              <h3>Environmental Policy</h3>
+              <p>[Replace with the actual environmental policy from the company profile. Below is a placeholder structure.]</p>
+              <p>Shri Karni Group of Companies recognises its responsibility to the environment and is committed to conducting all operations in a manner that minimises adverse environmental impact, complies with all applicable environmental legislation, and continuously improves our environmental performance.</p>
+              <p>Our commitments include:</p>
+              <ul>
+                <li>Minimising waste generation and ensuring responsible disposal of construction debris</li>
+                <li>Controlling dust, noise, and vibration at construction sites to protect surrounding communities</li>
+                <li>Preventing pollution of soil, water, and air through proper management of fuel, oils, and chemicals</li>
+                <li>Using resources — water, energy, and materials — efficiently and responsibly</li>
+                <li>Complying fully with all environmental clearances, NOCs, and statutory requirements applicable to our projects</li>
+                <li>Training all site staff on environmental responsibilities and reporting procedures</li>
+              </ul>
+              <p>This policy is implemented through our Environmental Management System and reviewed at least annually by senior management.</p>
+              <p style="margin-top:1.5rem;font-size:.82rem;color:var(--ink-light);">Signed: [Director Name], Managing Director &nbsp;|&nbsp; Date: [Policy Date]</p>
+            </div>
+          </div>
+
+          <!-- Health & Safety -->
+          <div class="policy-panel" id="policy-health" role="tabpanel">
+            <div class="policy-content">
+              <h3>Health & Safety Policy</h3>
+              <p>[Replace with the actual health and safety policy from the company profile. Below is a placeholder structure.]</p>
+              <p>The health, safety, and welfare of our employees, subcontractors, clients, and the public is of paramount importance to Shri Karni Group. We are committed to achieving the highest standards of occupational health and safety across all our operations.</p>
+              <p>Our commitments include:</p>
+              <ul>
+                <li>Providing a safe working environment, safe plant and equipment, and safe systems of work</li>
+                <li>Conducting risk assessments and method statements for every site activity, especially airside works</li>
+                <li>Ensuring all personnel are appropriately trained, qualified, and equipped with personal protective equipment</li>
+                <li>Complying with all DGCA airside safety requirements, OHSAS 18001 standards, and applicable Indian labour laws</li>
+                <li>Promptly investigating all incidents, near-misses, and unsafe conditions, and implementing corrective actions</li>
+                <li>Maintaining a culture where every employee is empowered and expected to stop unsafe work</li>
+                <li>Conducting regular safety inspections, toolbox talks, and emergency drills</li>
+              </ul>
+              <p>This policy is reviewed annually and its implementation is the personal responsibility of every manager and supervisor in the organisation.</p>
+              <p style="margin-top:1.5rem;font-size:.82rem;color:var(--ink-light);">Signed: [Director Name], Managing Director &nbsp;|&nbsp; Date: [Policy Date]</p>
+            </div>
+          </div>
+
+          <!-- HR -->
+          <div class="policy-panel" id="policy-hr" role="tabpanel">
+            <div class="policy-content">
+              <h3>HR & Equal Opportunity Policy</h3>
+              <p>[Replace with the actual HR policy from the company profile. Below is a placeholder structure.]</p>
+              <p>Shri Karni Group of Companies is an equal opportunity employer. We are committed to creating a workplace that is fair, inclusive, and respectful — where every individual is valued for their skills, contribution, and character.</p>
+              <ul>
+                <li>Recruitment, promotion, and reward are based on merit and competence — without discrimination on grounds of gender, religion, caste, or background</li>
+                <li>All employees receive appropriate training and development opportunities to grow in their careers</li>
+                <li>We comply fully with all applicable Indian labour laws including the Factories Act, Contract Labour Act, and Minimum Wages Act</li>
+                <li>A safe and harassment-free workplace is maintained, with a clear grievance redressal mechanism</li>
+                <li>Employee welfare — including health insurance, safety equipment, and fair wages — is a standing commitment</li>
+              </ul>
+              <p style="margin-top:1.5rem;font-size:.82rem;color:var(--ink-light);">Signed: [Director Name], Managing Director &nbsp;|&nbsp; Date: [Policy Date]</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div style="background:linear-gradient(135deg,#1A1A2E 0%,#2D2D50 100%); padding:4.5rem 0; text-align:center;">
+      <div class="container">
+        <h2 style="color:var(--white); margin-bottom:.75rem;">Ready to Work With Us?</h2>
+        <p style="color:rgba(255,255,255,.65); max-width:46ch; margin:0 auto 2rem;">Explore our two specialist entities or reach out directly to discuss your project.</p>
+        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+          <a href="../electrotech/index.html" class="btn btn-primary" style="--accent:var(--et-primary);background:var(--et-primary);border-color:var(--et-primary);">Shri Karni Electrotech</a>
+          <a href="../infrastructure/index.html" class="btn btn-primary" style="--accent:var(--inf-primary);background:var(--inf-primary);border-color:var(--inf-primary);">Shri Karni Infrastructure</a>
+          <a href="../contact/index.html" class="btn btn-ghost">Contact Us</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-wrap">
+            <span class="logo-main" style="color:var(--white)">Shri Karni <span style="color:var(--gold)">Group</span></span>
+            <span class="logo-sub">of Companies</span>
+          </div>
+          <p>Specialist electrical and civil infrastructure contracting — delivered with integrity across India.</p>
+          <div class="footer-entities">
+            <a href="../electrotech/index.html" class="footer-entity-badge et">Electrotech</a>
+            <a href="../infrastructure/index.html" class="footer-entity-badge inf">Infrastructure</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>On This Page</h4>
+          <ul>
+            <li><a href="#directors-message">Director's Message</a></li>
+            <li><a href="#vision-mission">Vision & Mission</a></li>
+            <li><a href="#values">Our Values</a></li>
+            <li><a href="#policies">Policies</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Our Entities</h4>
+          <ul>
+            <li><a href="../electrotech/index.html">Shri Karni Electrotech</a></li>
+            <li><a href="../infrastructure/index.html">Shri Karni Infrastructure</a></li>
+            <li><a href="../index.html">Group Home</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="../contact/index.html">Send Enquiry</a></li>
+            <li><a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></li>
+            <li><a href="mailto:info@shrikarnigroup.com">info@shrikarnigroup.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="footer-year"></span> Shri Karni Group of Companies. All rights reserved.</span>
+        <div style="display:flex;gap:1.5rem;"><a href="../index.html">Home</a><a href="#">Privacy Policy</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../shared.js"></script>
+  <script>
+    /* Policy tabs */
+    document.querySelectorAll('.policy-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.policy-tab').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', false); });
+        document.querySelectorAll('.policy-panel').forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', true);
+        const key = tab.dataset.policy;
+        document.getElementById('policy-' + key).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

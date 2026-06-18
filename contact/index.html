@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Shri Karni Group | Project Enquiries & Tender Discussions</title>
+  <meta name="description" content="Contact Shri Karni Group of Companies for project enquiries, tender discussions, and partnership opportunities across electrical and civil infrastructure works." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.shrikarnigroup.com/contact/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Shri Karni Group of Companies",
+    "url": "https://www.shrikarnigroup.com/contact/",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Shri Karni Group of Companies",
+      "telephone": "+91-XXXXXXXXXX",
+      "email": "info@shrikarnigroup.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "[Your Street Address]",
+        "addressLocality": "[Your City]",
+        "addressRegion": "[Your State]",
+        "postalCode": "[PIN]",
+        "addressCountry": "IN"
+      }
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../shared.css" />
+
+  <style>
+    .page-hero {
+      background: linear-gradient(150deg, var(--ink) 0%, #2D2D50 100%);
+      padding: 7rem 0 4rem; margin-top: 70px;
+      position: relative; overflow: hidden;
+    }
+    .page-hero::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+    .page-hero h1 { color: var(--white); margin-bottom: 1rem; }
+    .page-hero p { color: rgba(255,255,255,.65); max-width: 52ch; font-size: 1.05rem; }
+
+    /* Entity selector */
+    .entity-selector {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem;
+    }
+    .entity-select-card {
+      border: 2px solid var(--border); border-radius: 8px; padding: 1.25rem 1.5rem;
+      cursor: pointer; transition: all .2s; display: flex; align-items: center; gap: 1rem;
+      background: var(--white);
+    }
+    .entity-select-card:hover { border-color: var(--gold); }
+    .entity-select-card.selected-et { border-color: var(--et-primary); background: var(--et-pale); }
+    .entity-select-card.selected-inf { border-color: var(--inf-primary); background: var(--inf-pale); }
+    .esc-dot {
+      width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0;
+      border: 2px solid var(--border);
+      transition: all .2s;
+    }
+    .entity-select-card.selected-et .esc-dot { background: var(--et-primary); border-color: var(--et-primary); }
+    .entity-select-card.selected-inf .esc-dot { background: var(--inf-primary); border-color: var(--inf-primary); }
+    .esc-label { font-weight: 600; font-size: .9rem; }
+    .esc-sub { font-size: .75rem; color: var(--ink-light); }
+
+    /* Contact layout */
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: start;
+    }
+    .contact-info h2 { margin-bottom: .75rem; }
+    .contact-info > p { margin-bottom: 2rem; }
+
+    .contact-details { display: flex; flex-direction: column; gap: 1.25rem; margin-bottom: 2.5rem; }
+    .contact-row { display: flex; gap: 1rem; align-items: flex-start; }
+    .contact-icon {
+      width: 42px; height: 42px; background: var(--gold-pale);
+      border-radius: var(--radius); display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .contact-icon svg { width: 18px; height: 18px; stroke: var(--gold); fill: none; stroke-width: 2; }
+    .contact-row strong { display: block; font-size: .85rem; margin-bottom: .15rem; color: var(--ink); }
+    .contact-row span, .contact-row a { font-size: .875rem; color: var(--ink-mid); }
+    .contact-row a:hover { color: var(--gold); text-decoration: underline; }
+
+    /* Entity contact callouts */
+    .entity-contacts { display: flex; flex-direction: column; gap: .75rem; }
+    .entity-contact-row {
+      display: flex; align-items: center; gap: .75rem;
+      padding: .875rem 1.25rem; border-radius: var(--radius);
+      font-size: .85rem;
+    }
+    .entity-contact-row.et { background: var(--et-pale); border: 1px solid rgba(0,71,171,.2); }
+    .entity-contact-row.inf { background: var(--inf-pale); border: 1px solid rgba(27,94,32,.2); }
+    .ecr-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .et .ecr-dot { background: var(--et-primary); }
+    .inf .ecr-dot { background: var(--inf-primary); }
+    .ecr-name { font-weight: 600; color: var(--ink); min-width: 160px; }
+    .ecr-email { color: var(--ink-mid); }
+
+    /* Form box */
+    .contact-form-box {
+      background: var(--surface); border-radius: 10px; padding: 2.5rem;
+      border: 1px solid var(--border);
+    }
+    .contact-form-box h3 { margin-bottom: 1.5rem; font-size: 1.2rem; }
+
+    /* Map placeholder */
+    .map-placeholder {
+      background: var(--surface); border-radius: 8px;
+      border: 1px solid var(--border); height: 260px;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: .75rem;
+      color: var(--ink-light); font-size: .875rem; text-align: center;
+      margin-top: 2rem;
+    }
+    .map-placeholder svg { width: 36px; height: 36px; stroke: var(--gold); fill: none; stroke-width: 1.5; opacity: .6; }
+
+    @media (max-width: 900px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      .entity-selector { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header id="site-header" role="banner">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Primary navigation">
+        <a href="../index.html" class="logo-wrap" aria-label="Shri Karni Group home">
+          <span class="logo-main">Shri Karni <span>Group</span></span>
+          <span class="logo-sub">of Companies</span>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about/index.html">About</a></li>
+          <li><a href="../electrotech/index.html" class="nav-pill nav-pill-et">Electrotech</a></li>
+          <li><a href="../infrastructure/index.html" class="nav-pill nav-pill-inf">Infrastructure</a></li>
+          <li><a href="index.html" class="btn btn-primary btn-sm">Contact Us</a></li>
+        </ul>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <a href="../index.html">Home</a>
+      <a href="../about/index.html">About Group</a>
+      <div class="mob-divider">Our Entities</div>
+      <a href="../electrotech/index.html">Shri Karni Electrotech →</a>
+      <a href="../infrastructure/index.html">Shri Karni Infrastructure →</a>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container">
+      <nav aria-label="Breadcrumb" style="margin-bottom:1.5rem;">
+        <ol style="display:flex;gap:.5rem;font-size:.78rem;color:rgba(255,255,255,.4);list-style:none;">
+          <li><a href="../index.html" style="color:var(--gold);">Shri Karni Group</a></li>
+          <li style="opacity:.5;">/</li>
+          <li style="color:rgba(255,255,255,.7);" aria-current="page">Contact</li>
+        </ol>
+      </nav>
+      <span class="eyebrow">Get in Touch</span>
+      <h1>Let's Discuss Your Project</h1>
+      <p>Whether you're issuing a tender, seeking a pre-bid consultation, or exploring a partnership — we respond within one business day.</p>
+    </div>
+  </div>
+
+  <main id="main">
+    <section class="section" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- LEFT: Info -->
+          <div data-reveal>
+            <span class="eyebrow">Contact Information</span>
+            <h2 id="contact-heading">Reach the Right Team</h2>
+            <hr class="gold-rule" aria-hidden="true" />
+            <p>All enquiries to the Group are handled centrally. Use the form to specify which entity your project relates to — we'll route it to the right team.</p>
+
+            <div class="contact-details">
+              <div class="contact-row">
+                <div class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.29 6.29l1.28-1.34a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                </div>
+                <div>
+                  <strong>Phone</strong>
+                  <a href="tel:+91XXXXXXXXXX" class="d-block">+91 XXXXX XXXXX</a>
+                </div>
+              </div>
+              <div class="contact-row">
+                <div class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <strong>Email</strong>
+                  <a href="mailto:info@shrikarnigroup.com">info@shrikarnigroup.com</a>
+                </div>
+              </div>
+              <div class="contact-row">
+                <div class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <strong>Registered Office</strong>
+                  <span>[Street Address]<br/>[City, State — PIN]</span>
+                </div>
+              </div>
+              <div class="contact-row">
+                <div class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div>
+                  <strong>Business Hours</strong>
+                  <span>Monday – Saturday, 9:00 AM – 6:00 PM</span>
+                </div>
+              </div>
+            </div>
+
+            <h4 style="margin-bottom:.875rem; font-family:var(--font-head);">Entity-Specific Contacts</h4>
+            <div class="entity-contacts">
+              <div class="entity-contact-row et">
+                <span class="ecr-dot" aria-hidden="true"></span>
+                <span class="ecr-name">Shri Karni Electrotech</span>
+                <a href="mailto:electrotech@shrikarnigroup.com" class="ecr-email">electrotech@shrikarnigroup.com</a>
+              </div>
+              <div class="entity-contact-row inf">
+                <span class="ecr-dot" aria-hidden="true"></span>
+                <span class="ecr-name">Shri Karni Infrastructure</span>
+                <a href="mailto:infrastructure@shrikarnigroup.com" class="ecr-email">infrastructure@shrikarnigroup.com</a>
+              </div>
+            </div>
+
+            <div class="map-placeholder" role="img" aria-label="Office location map placeholder — replace with Google Maps embed">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Replace this with a Google Maps embed<br/>of your registered office location</span>
+            </div>
+          </div>
+
+          <!-- RIGHT: Form -->
+          <div data-reveal>
+            <div class="contact-form-box">
+              <h3>Send Us an Enquiry</h3>
+
+              <!-- Entity selector -->
+              <div style="margin-bottom:1.5rem;">
+                <label style="display:block;font-size:.85rem;font-weight:600;margin-bottom:.6rem;">I am enquiring about <span aria-hidden="true" style="color:red">*</span></label>
+                <div class="entity-selector" role="radiogroup" aria-label="Select entity">
+                  <div class="entity-select-card" id="esc-et" tabindex="0" role="radio" aria-checked="false" data-entity="electrotech">
+                    <div class="esc-dot" aria-hidden="true"></div>
+                    <div>
+                      <div class="esc-label">Shri Karni Electrotech</div>
+                      <div class="esc-sub">Electrical works, HT/LT, substation, AGL</div>
+                    </div>
+                  </div>
+                  <div class="entity-select-card" id="esc-inf" tabindex="0" role="radio" aria-checked="false" data-entity="infrastructure">
+                    <div class="esc-dot" aria-hidden="true"></div>
+                    <div>
+                      <div class="esc-label">Shri Karni Infrastructure</div>
+                      <div class="esc-sub">Runway, terminal, taxiway, civil works</div>
+                    </div>
+                  </div>
+                </div>
+                <input type="hidden" id="selected-entity" name="entity" value="" />
+              </div>
+
+              <form id="contact-form" class="contact-form-el" novalidate aria-label="Project enquiry form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="name">Full Name <span aria-hidden="true" style="color:red">*</span></label>
+                    <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your name" />
+                  </div>
+                  <div class="form-group">
+                    <label for="org">Organisation</label>
+                    <input type="text" id="org" name="org" autocomplete="organization" placeholder="Company / Authority" />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="email">Email <span aria-hidden="true" style="color:red">*</span></label>
+                    <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@company.com" />
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+91 XXXXX XXXXX" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="project-type">Project / Service Type</label>
+                  <select id="project-type" name="project-type">
+                    <option value="">Select a category</option>
+                    <optgroup label="Electrotech">
+                      <option value="ht-lt">HT / LT Works</option>
+                      <option value="substation">Substation Erection</option>
+                      <option value="airport-electrical">Airport Electrical / AGL</option>
+                      <option value="industrial">Industrial Wiring</option>
+                    </optgroup>
+                    <optgroup label="Infrastructure">
+                      <option value="runway">Runway Works</option>
+                      <option value="terminal">Terminal Civil Works</option>
+                      <option value="taxiway">Taxiway / Apron</option>
+                      <option value="drainage">Drainage & Utilities</option>
+                    </optgroup>
+                    <option value="other">Other / Not Sure</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="tender-ref">Tender Reference No. (if applicable)</label>
+                  <input type="text" id="tender-ref" name="tender-ref" placeholder="e.g. AAI/CHK/2025/XX" />
+                </div>
+                <div class="form-group">
+                  <label for="message">Project Brief <span aria-hidden="true" style="color:red">*</span></label>
+                  <textarea id="message" name="message" required placeholder="Describe your project scope, airport location, expected timeline, and any relevant details…"></textarea>
+                  <div class="form-note">All enquiries are treated in strict confidence.</div>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%;padding:.9rem;font-size:1rem;justify-content:center;">Submit Enquiry →</button>
+                <div class="form-success" role="alert" aria-live="polite">
+                  ✓ Thank you — we'll be in touch within one business day.
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-wrap">
+            <span class="logo-main" style="color:var(--white)">Shri Karni <span style="color:var(--gold)">Group</span></span>
+            <span class="logo-sub">of Companies</span>
+          </div>
+          <p>Specialist electrical and civil infrastructure contracting — delivered with integrity across India.</p>
+          <div class="footer-entities">
+            <a href="../electrotech/index.html" class="footer-entity-badge et">Electrotech</a>
+            <a href="../infrastructure/index.html" class="footer-entity-badge inf">Infrastructure</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Our Entities</h4>
+          <ul>
+            <li><a href="../electrotech/index.html">Shri Karni Electrotech</a></li>
+            <li><a href="../infrastructure/index.html">Shri Karni Infrastructure</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="../index.html">Group Home</a></li>
+            <li><a href="../about/index.html">About & Policies</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></li>
+            <li><a href="mailto:info@shrikarnigroup.com">info@shrikarnigroup.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="footer-year"></span> Shri Karni Group of Companies. All rights reserved.</span>
+        <div style="display:flex;gap:1.5rem;"><a href="../index.html">Home</a><a href="#">Privacy Policy</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../shared.js"></script>
+  <script>
+    /* Entity selector cards */
+    const cards = document.querySelectorAll('.entity-select-card');
+    const hiddenInput = document.getElementById('selected-entity');
+    cards.forEach(card => {
+      const activate = () => {
+        cards.forEach(c => {
+          c.classList.remove('selected-et', 'selected-inf');
+          c.setAttribute('aria-checked', false);
+        });
+        const entity = card.dataset.entity;
+        card.classList.add(entity === 'electrotech' ? 'selected-et' : 'selected-inf');
+        card.setAttribute('aria-checked', true);
+        hiddenInput.value = entity;
+      };
+      card.addEventListener('click', activate);
+      card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); } });
+    });
+  </script>
+</body>
+</html>

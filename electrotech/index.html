@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shri Karni Electrotech | Electrical Contracting & Airport Electrical Works</title>
+  <meta name="description" content="Shri Karni Electrotech is a specialist electrical contractor for HT/LT installations, substation erection, airport electrical systems, and industrial electrification across India." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.shrikarnigroup.com/electrotech/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Shri Karni Electrotech | Electrical Contracting Specialists" />
+  <meta property="og:description" content="HT/LT systems, substation works, airport electrical, and industrial installations — delivered by Shri Karni Electrotech." />
+  <meta property="og:url" content="https://www.shrikarnigroup.com/electrotech/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Shri Karni Electrotech",
+    "url": "https://www.shrikarnigroup.com/electrotech/",
+    "description": "Specialist electrical contractor for HT/LT, substation, airport electrical, and industrial works.",
+    "parentOrganization": { "@type": "Organization", "name": "Shri Karni Group of Companies" },
+    "address": { "@type": "PostalAddress", "addressCountry": "IN" }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../shared.css" />
+
+  <style>
+    /* Override accent to Electrotech blue */
+    :root {
+      --accent:      var(--et-primary);
+      --accent-mid:  var(--et-mid);
+      --accent-pale: var(--et-pale);
+    }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 88vh; padding-top: 70px;
+      background:
+        linear-gradient(150deg, rgba(0,30,90,.90) 0%, rgba(5,15,45,.82) 100%),
+        url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80') center/cover no-repeat;
+      display: flex; align-items: center; position: relative; overflow: hidden;
+    }
+    .et-stripe {
+      position: absolute; bottom: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, transparent, var(--et-primary), var(--et-mid), transparent);
+    }
+    #hero h1 { color: var(--white); margin-bottom: 1.25rem; }
+    #hero h1 em { font-style: italic; color: #7FB8FF; }
+    #hero .lead { color: rgba(255,255,255,.72); margin-bottom: 2rem; }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 2rem; }
+    .hero-tag {
+      padding: .3rem .85rem; border-radius: 999px;
+      background: rgba(0,71,171,.3); border: 1px solid rgba(0,71,171,.5);
+      font-size: .75rem; font-weight: 600; color: #7FB8FF;
+    }
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    /* ── SERVICES GRID ── */
+    .services-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;
+    }
+    .service-card {
+      padding: 2rem; border-radius: 8px;
+      background: var(--white); border: 1px solid var(--border);
+      transition: transform .25s var(--ease), box-shadow .25s;
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,71,171,.1); }
+    .service-card h3 { margin-bottom: .6rem; }
+    .service-card p { font-size: .9rem; }
+
+    /* ── PROJECTS ── */
+    .projects-filters {
+      display: flex; gap: .75rem; flex-wrap: wrap; margin-bottom: 2.5rem;
+    }
+    .filter-btn {
+      padding: .4rem 1.1rem; border-radius: 999px;
+      border: 1.5px solid var(--border); background: transparent;
+      font-size: .82rem; font-weight: 500; cursor: pointer; color: var(--ink-light);
+      transition: all .2s;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--accent); border-color: var(--accent); color: var(--white);
+    }
+    .projects-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem;
+    }
+    .project-card { border-radius: 8px; overflow: hidden; border: 1px solid var(--border); transition: transform .25s var(--ease); }
+    .project-card:hover { transform: translateY(-4px); }
+    .project-img { position: relative; height: 210px; overflow: hidden; background: var(--accent-pale); }
+    .project-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+    .project-card:hover .project-img img { transform: scale(1.04); }
+    .project-tag {
+      position: absolute; top: 1rem; left: 1rem;
+      background: var(--accent); color: var(--white);
+      font-size: .7rem; font-weight: 700; padding: .28rem .7rem;
+      border-radius: 999px; text-transform: uppercase; letter-spacing: .05em;
+    }
+    .project-body { padding: 1.5rem; background: var(--white); }
+    .project-body h3 { margin-bottom: .4rem; font-size: 1.05rem; }
+    .project-body p { font-size: .875rem; margin-bottom: .9rem; }
+    .project-meta {
+      display: flex; gap: 1.25rem; font-size: .78rem;
+      color: var(--ink-light); font-family: var(--font-mono);
+    }
+
+    /* ── CERTIFICATIONS ── */
+    .certs-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1.25rem; text-align: center;
+    }
+    .cert-item {
+      padding: 1.75rem 1rem; border: 1px solid var(--border);
+      border-radius: 8px; background: var(--white);
+      transition: border-color .2s;
+    }
+    .cert-item:hover { border-color: var(--accent); }
+    .cert-badge {
+      width: 60px; height: 60px; background: var(--accent-pale);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1rem;
+      font-family: var(--font-mono); font-size: .68rem; font-weight: 700;
+      color: var(--accent); letter-spacing: .04em; text-align: center; line-height: 1.3;
+    }
+    .cert-item h3 { font-size: .9rem; margin-bottom: .25rem; }
+    .cert-item p { font-size: .78rem; }
+
+    /* ── CLIENTS FULL GRID ── */
+    .clients-section-et { background: var(--surface); }
+
+    /* ── FAQ ── */
+    .faq-list { max-width: 760px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-q {
+      width: 100%; text-align: left; background: none; border: none; cursor: pointer;
+      padding: 1.2rem 0; display: flex; justify-content: space-between; align-items: center;
+      font-size: .975rem; font-weight: 600; color: var(--ink); font-family: var(--font-body);
+    }
+    .faq-icon {
+      width: 24px; height: 24px; flex-shrink: 0;
+      border: 2px solid var(--accent); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--accent); font-size: 1.1rem; transition: transform .3s, background .2s;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--accent); color: var(--white); }
+    .faq-a { overflow: hidden; max-height: 0; transition: max-height .35s ease; }
+    .faq-a-inner { padding: 0 0 1.25rem; color: var(--ink-mid); font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ════ HEADER ════ -->
+  <header id="site-header" role="banner">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Primary navigation">
+        <a href="../index.html" class="logo-wrap" aria-label="Shri Karni Group home">
+          <span class="logo-main">Shri Karni <span>Group</span></span>
+          <span class="logo-sub">Electrotech</span>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#clients">Clients</a></li>
+          <li><a href="../about/index.html">About Group</a></li>
+          <li><a href="../infrastructure/index.html" class="nav-pill nav-pill-inf">Infrastructure</a></li>
+          <li><a href="../contact/index.html" class="btn btn-primary btn-sm">Contact Us</a></li>
+        </ul>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#clients">Clients</a>
+      <a href="../about/index.html">About Group</a>
+      <div class="mob-divider">Other Entity</div>
+      <a href="../infrastructure/index.html">Shri Karni Infrastructure →</a>
+      <a href="../contact/index.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- ════ BREADCRUMB ════ -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol>
+        <li><a href="../index.html">Shri Karni Group</a></li>
+        <li aria-current="page">Shri Karni Electrotech</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <!-- ════ HERO ════ -->
+    <section id="hero" aria-label="Shri Karni Electrotech introduction">
+      <div class="container">
+        <div style="max-width:680px">
+          <span class="eyebrow" style="color:#7FB8FF;">Shri Karni Group · Electrical Division</span>
+          <h1>Powering Infrastructure with <em>Precision Electrical Works</em></h1>
+          <div class="hero-tags">
+            <span class="hero-tag">HT / LT Works</span>
+            <span class="hero-tag">Substation Erection</span>
+            <span class="hero-tag">Airport Electrical</span>
+            <span class="hero-tag">Industrial Installations</span>
+            <span class="hero-tag">Earthing & Lightning Protection</span>
+          </div>
+          <p class="lead">From high-tension transmission lines to airfield lighting circuits — Shri Karni Electrotech delivers certified, safety-first electrical contracting for government and private sector clients.</p>
+          <div class="hero-ctas">
+            <a href="#projects" class="btn btn-primary">View Our Projects</a>
+            <a href="../contact/index.html" class="btn btn-ghost">Request a Quote</a>
+          </div>
+        </div>
+      </div>
+      <div class="et-stripe" aria-hidden="true"></div>
+    </section>
+
+    <!-- ════ STATS ════ -->
+    <div style="padding:2rem 0; background:var(--white); border-bottom:1px solid var(--border);">
+      <div class="container">
+        <div class="stat-bar" data-reveal>
+          <div class="stat-bar-item">
+            <span class="stat-num" style="color:var(--et-primary);">XX+</span>
+            <span class="stat-label">Electrical Projects</span>
+          </div>
+          <div class="stat-bar-item">
+            <span class="stat-num" style="color:var(--et-primary);">XX+</span>
+            <span class="stat-label">Clients Served</span>
+          </div>
+          <div class="stat-bar-item">
+            <span class="stat-num" style="color:var(--et-primary);">XX kV</span>
+            <span class="stat-label">Max HT Voltage Handled</span>
+          </div>
+          <div class="stat-bar-item">
+            <span class="stat-num" style="color:var(--et-primary);">XX+</span>
+            <span class="stat-label">Airports Served</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════ SERVICES ════ -->
+    <section id="services" class="section" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Our Services</span>
+          <h2 id="services-heading">Electrical Works — From Grid to Socket</h2>
+          <hr class="gold-rule" aria-hidden="true" />
+          <p class="lead">A complete range of electrical contracting services, each executed by certified engineers and technicians.</p>
+        </div>
+        <div class="services-grid">
+
+          <article class="service-card" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3>HT / LT Power Distribution</h3>
+            <p>High and low tension cable laying, jointing, and termination for industrial plants, commercial complexes, and government facilities. Includes overhead line works and underground cabling.</p>
+          </article>
+
+          <article class="service-card" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2M12 12v3M9 15h6"/></svg>
+            </div>
+            <h3>Substation Erection & Commissioning</h3>
+            <p>Design, supply, erection, and commissioning of HT/LT substations including transformer installation, switchgear panels, bus bars, and protection systems.</p>
+          </article>
+
+          <article class="service-card" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/><circle cx="12" cy="12" r="4"/></svg>
+            </div>
+            <h3>Airport Electrical Systems</h3>
+            <p>Airfield ground lighting (AGL), constant current regulators (CCR), approach lighting, runway edge lights, taxiway lighting, and power supply systems compliant with DGCA and AAI standards.</p>
+          </article>
+
+          <article class="service-card" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3>Industrial & Commercial Wiring</h3>
+            <p>Internal wiring, panel boards, DB installation, lighting systems, and power circuits for factories, warehouses, hospitals, and commercial buildings.</p>
+          </article>
+
+          <article class="service-card" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 22V12M12 12L8 8M12 12l4-4M2 17l4-4M18 17l4-4"/></svg>
+            </div>
+            <h3>Earthing & Lightning Protection</h3>
+            <p>Conventional and chemical earthing systems, lightning arrestors, surge protection devices, and earth mat design for substations and industrial facilities.</p>
+          </article>
+
+          <article class="service-card" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            </div>
+            <h3>Energy Audit & Power Quality</h3>
+            <p>Electrical energy audits, power factor correction, harmonic analysis, and load balancing studies for industrial and commercial clients to reduce energy costs and improve efficiency.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════ PROJECTS ════ -->
+    <section id="projects" class="section section--alt" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Our Work</span>
+          <h2 id="projects-heading">Selected Project Portfolio</h2>
+          <hr class="gold-rule" aria-hidden="true" />
+          <p class="lead">A sample of completed electrical projects — replace with real project details and photographs.</p>
+        </div>
+
+        <div data-filter-group>
+          <div class="projects-filters" role="group" aria-label="Filter by project type">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="airport">Airport Electrical</button>
+            <button class="filter-btn" data-filter="substation">Substation</button>
+            <button class="filter-btn" data-filter="industrial">Industrial</button>
+            <button class="filter-btn" data-filter="htlt">HT / LT Works</button>
+          </div>
+
+          <div class="projects-grid">
+
+            <article class="project-card filterable" data-category="airport" data-reveal>
+              <div class="project-img">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=75" alt="Airport airfield ground lighting project" loading="lazy" width="600" height="210"/>
+                <span class="project-tag">Airport</span>
+              </div>
+              <div class="project-body">
+                <h3>Airfield Ground Lighting — [Airport Name]</h3>
+                <p>Supply, installation, and commissioning of runway edge lights, taxiway lights, and CCR panels under AAI tender.</p>
+                <div class="project-meta"><span>₹ XX Cr</span><span>[Year]</span><span>AAI Tender</span></div>
+              </div>
+            </article>
+
+            <article class="project-card filterable" data-category="substation" data-reveal>
+              <div class="project-img">
+                <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=600&q=75" alt="Substation erection and commissioning" loading="lazy" width="600" height="210"/>
+                <span class="project-tag">Substation</span>
+              </div>
+              <div class="project-body">
+                <h3>XX kV Substation Erection — [Client / Location]</h3>
+                <p>Complete erection and commissioning of HT substation including transformer, panels, and protection relay systems.</p>
+                <div class="project-meta"><span>₹ XX Cr</span><span>[Year]</span><span>[Client]</span></div>
+              </div>
+            </article>
+
+            <article class="project-card filterable" data-category="htlt" data-reveal>
+              <div class="project-img">
+                <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&q=75" alt="HT cable laying project" loading="lazy" width="600" height="210"/>
+                <span class="project-tag">HT / LT</span>
+              </div>
+              <div class="project-body">
+                <h3>Underground HT Cabling — [Location]</h3>
+                <p>XX km underground HT cable laying, jointing, and termination for a government facility.</p>
+                <div class="project-meta"><span>₹ XX Cr</span><span>[Year]</span><span>[Client]</span></div>
+              </div>
+            </article>
+
+            <article class="project-card filterable" data-category="industrial" data-reveal>
+              <div class="project-img">
+                <img src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=600&q=75" alt="Industrial electrical works" loading="lazy" width="600" height="210"/>
+                <span class="project-tag">Industrial</span>
+              </div>
+              <div class="project-body">
+                <h3>Electrification — [Industrial Client / Location]</h3>
+                <p>Complete internal electrification of manufacturing plant including MCC panels, cable trays, and power distribution.</p>
+                <div class="project-meta"><span>₹ XX Cr</span><span>[Year]</span><span>[Client]</span></div>
+              </div>
+            </article>
+
+            <article class="project-card filterable" data-category="airport" data-reveal>
+              <div class="project-img">
+                <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&q=75" alt="Airport power supply works" loading="lazy" width="600" height="210"/>
+                <span class="project-tag">Airport</span>
+              </div>
+              <div class="project-body">
+                <h3>Terminal Power Supply Works — [Airport Name]</h3>
+                <p>HT/LT distribution, UPS systems, DG set installation, and panel wiring for new terminal building.</p>
+                <div class="project-meta"><span>₹ XX Cr</span><span>[Year]</span><span>AAI Tender</span></div>
+              </div>
+            </article>
+
+            <article class="project-card filterable" data-category="substation" data-reveal>
+              <div class="project-img">
+                <img src="https://images.unsplash.com/photo-1548337138-e87d889cc369?w=600&q=75" alt="Transformer installation" loading="lazy" width="600" height="210"/>
+                <span class="project-tag">Substation</span>
+              </div>
+              <div class="project-body">
+                <h3>Transformer Installation — [Client / Location]</h3>
+                <p>Supply and installation of XX MVA power transformers with oil testing, protection relay, and commissioning.</p>
+                <div class="project-meta"><span>₹ XX Cr</span><span>[Year]</span><span>[Client]</span></div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════ CERTIFICATIONS ════ -->
+    <section id="certifications" class="section" aria-labelledby="certs-heading">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <span class="eyebrow">Credentials</span>
+          <h2 id="certs-heading">Certified & Registered</h2>
+          <hr class="gold-rule gold-rule--center" aria-hidden="true" />
+          <p class="lead">All registrations and certifications required by clients before issuing work orders — in place and current.</p>
+        </div>
+        <div class="certs-grid" data-reveal>
+          <div class="cert-item">
+            <div class="cert-badge" aria-hidden="true">CEI</div>
+            <h3>Electrical Contractor Licence</h3>
+            <p>Licensed electrical contractor as per Indian Electricity Rules.</p>
+          </div>
+          <div class="cert-item">
+            <div class="cert-badge" aria-hidden="true">AAI</div>
+            <h3>AAI Registered</h3>
+            <p>Registered with Airports Authority of India for electrical works.</p>
+          </div>
+          <div class="cert-item">
+            <div class="cert-badge" aria-hidden="true">ISO</div>
+            <h3>ISO 9001:2015</h3>
+            <p>Quality management system certified for electrical contracting.</p>
+          </div>
+          <div class="cert-item">
+            <div class="cert-badge" aria-hidden="true">CPWD</div>
+            <h3>CPWD Enlistment</h3>
+            <p>Enlisted with Central Public Works Department — electrical category.</p>
+          </div>
+          <div class="cert-item">
+            <div class="cert-badge" aria-hidden="true">GST</div>
+            <h3>GST Registered</h3>
+            <p>Fully GST compliant for government and private tender participation.</p>
+          </div>
+          <div class="cert-item">
+            <div class="cert-badge" aria-hidden="true">OHSAS</div>
+            <h3>Safety Certified</h3>
+            <p>Occupational health & safety management system in place.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════ CLIENTS — FULL LIST ════ -->
+    <section id="clients" class="section clients-section-et" aria-labelledby="clients-heading">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <span class="eyebrow">Our Clients</span>
+          <h2 id="clients-heading">Electrotech Client List</h2>
+          <hr class="gold-rule gold-rule--center" aria-hidden="true" />
+          <p class="lead">Organisations that have trusted Shri Karni Electrotech for their electrical contracting needs.</p>
+        </div>
+        <div class="clients-grid" data-reveal>
+          <div class="client-grid-item">Client Name 1</div>
+          <div class="client-grid-item">Client Name 2</div>
+          <div class="client-grid-item">Client Name 3</div>
+          <div class="client-grid-item">Client Name 4</div>
+          <div class="client-grid-item">Client Name 5</div>
+          <div class="client-grid-item">Client Name 6</div>
+          <div class="client-grid-item">Client Name 7</div>
+          <div class="client-grid-item">Client Name 8</div>
+          <div class="client-grid-item">Client Name 9</div>
+          <div class="client-grid-item">Client Name 10</div>
+          <div class="client-grid-item">Client Name 11</div>
+          <div class="client-grid-item">Client Name 12</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════ FAQ ════ -->
+    <section id="faq" class="section" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <span class="eyebrow">FAQ</span>
+          <h2 id="faq-heading">Common Questions</h2>
+          <hr class="gold-rule gold-rule--center" aria-hidden="true" />
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-et-1">
+              Is Shri Karni Electrotech licensed for HT electrical works?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" id="faq-et-1"><div class="faq-a-inner">Yes. We hold a valid electrical contractor licence under the Indian Electricity Rules and are authorised to undertake HT works up to [XX] kV. All work is supervised by licensed electrical supervisors and engineers.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-et-2">
+              Can you work on live airport electrical systems?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" id="faq-et-2"><div class="faq-a-inner">Yes. Our teams are experienced in working within live airport environments — coordinating with airport operations and adhering to DGCA safety protocols. We have completed multiple AGL and power supply projects at operational airports.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-et-3">
+              Do you supply materials or only provide labour and installation?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" id="faq-et-3"><div class="faq-a-inner">We offer both supply-and-install and labour-only contracts depending on client requirements. For tender-based projects we typically work on a supply, erection, testing, and commissioning (SETC) basis.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-et-4">
+              What is your geographic coverage for electrical projects?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" id="faq-et-4"><div class="faq-a-inner">We primarily work across [Your Regions]. Larger projects elsewhere are evaluated case by case based on scope and mobilisation requirements.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════ CTA ════ -->
+    <div style="background:linear-gradient(135deg,var(--et-primary) 0%,#00306E 100%); padding:4.5rem 0; text-align:center;">
+      <div class="container">
+        <span class="eyebrow" style="color:rgba(255,255,255,.6);">Work With Electrotech</span>
+        <h2 style="color:var(--white); margin-bottom:.75rem;">Have an Electrical Project or Tender?</h2>
+        <p style="color:rgba(255,255,255,.65); max-width:46ch; margin:0 auto 2rem;">Get in touch and our team will respond within one business day.</p>
+        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+          <a href="../contact/index.html" class="btn btn-primary" style="background:var(--white);color:var(--et-primary);border-color:var(--white);">Send an Enquiry</a>
+          <a href="../infrastructure/index.html" class="btn btn-ghost">View Infrastructure →</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ════ FOOTER ════ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-wrap">
+            <span class="logo-main" style="color:var(--white)">Shri Karni <span style="color:var(--gold)">Group</span></span>
+            <span class="logo-sub">Electrotech</span>
+          </div>
+          <p>Specialist electrical contractor — HT/LT, substations, airport electrical, and industrial works.</p>
+          <div class="footer-entities">
+            <a href="../index.html" class="footer-entity-badge et" style="color:rgba(255,255,255,.5);border-color:rgba(255,255,255,.15);">← Group Home</a>
+            <a href="../infrastructure/index.html" class="footer-entity-badge inf">Infrastructure</a>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="mailto:info@shrikarnigroup.com" class="social-link" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">HT / LT Works</a></li>
+            <li><a href="#services">Substation Erection</a></li>
+            <li><a href="#services">Airport Electrical</a></li>
+            <li><a href="#services">Industrial Wiring</a></li>
+            <li><a href="#services">Earthing Systems</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#clients">Clients</a></li>
+            <li><a href="../about/index.html">About Group</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="../contact/index.html">Send Enquiry</a></li>
+            <li><a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></li>
+            <li><a href="mailto:info@shrikarnigroup.com">info@shrikarnigroup.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="footer-year"></span> Shri Karni Electrotech · Shri Karni Group of Companies.</span>
+        <div style="display:flex;gap:1.5rem;"><a href="../index.html">Group Home</a><a href="#">Privacy Policy</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../shared.js"></script>
+</body>
+</html>
