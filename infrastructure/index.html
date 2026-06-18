@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shri Karni Infrastructure | Airport Civil Works & Infrastructure Contractor</title>
+  <meta name="description" content="Shri Karni Infrastructure is a specialist airport civil contractor for runway works, terminal construction, taxiways, drainage, and airside infrastructure under AAI and private airport tenders." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.shrikarnigroup.com/infrastructure/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Shri Karni Infrastructure | Airport Civil Works Specialists" />
+  <meta property="og:description" content="Runway resurfacing, terminal civil works, taxiway and apron construction — Shri Karni Infrastructure delivers precision airport civil works." />
+  <meta property="og:url" content="https://www.shrikarnigroup.com/infrastructure/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Shri Karni Infrastructure",
+    "url": "https://www.shrikarnigroup.com/infrastructure/",
+    "description": "Specialist airport civil contractor for runway, terminal, taxiway, and airside infrastructure works.",
+    "parentOrganization": { "@type": "Organization", "name": "Shri Karni Group of Companies" },
+    "address": { "@type": "PostalAddress", "addressCountry": "IN" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Shri Karni Infrastructure registered for AAI tenders?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Shri Karni Infrastructure is a registered civil contractor with the Airports Authority of India (AAI) and has successfully completed multiple tender-based airport projects." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can Shri Karni Infrastructure work within live airport operational hours?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. All teams are trained for airside safety and night-window execution, coordinating with ATC and airport operations to ensure zero disruption to flight schedules." }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../shared.css" />
+
+  <style>
+    :root {
+      --accent:      var(--inf-primary);
+      --accent-mid:  var(--inf-mid);
+      --accent-pale: var(--inf-pale);
+    }
+
+    #hero {
+      min-height: 88vh; padding-top: 70px;
+      background:
+        linear-gradient(150deg, rgba(5,25,10,.90) 0%, rgba(5,20,8,.82) 100%),
+        url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=80') center/cover no-repeat;
+      display: flex; align-items: center; position: relative; overflow: hidden;
+    }
+    .inf-stripe {
+      position: absolute; bottom: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, transparent, var(--inf-primary), var(--inf-mid), transparent);
+    }
+    .runway-stripe-deco {
+      position: absolute; bottom: 6px; left: 0; right: 0; height: 3px;
+      background: repeating-linear-gradient(90deg, var(--gold) 0, var(--gold) 30px, transparent 30px, transparent 50px);
+      opacity: .5;
+    }
+    #hero h1 { color: var(--white); margin-bottom: 1.25rem; }
+    #hero h1 em { font-style: italic; color: #81C784; }
+    #hero .lead { color: rgba(255,255,255,.72); margin-bottom: 2rem; }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 2rem; }
+    .hero-tag {
+      padding: .3rem .85rem; border-radius: 999px;
+      background: rgba(27,94,32,.3); border: 1px solid rgba(27,94,32,.5);
+      font-size: .75rem; font-weight: 600; color: #81C784;
+    }
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    /* Services */
+    .services-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;
+    }
+    .service-card {
+      padding: 2rem; border-radius: 8px;
+      background: var(--white); border: 1px solid var(--border);
+      transition: transform .25s var(--ease), box-shadow .25s;
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(27,94,32,.1); }
+    .service-card h3 { margin-bottom: .6rem; }
+    .service-card p { font-size: .9rem; }
+
+    /* Process */
+    .process-steps {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(190px,1fr));
+      gap: 0; position: relative;
+    }
+    .process-steps::before {
+      content:''; position:absolute; top:28px; left:8%; right:8%;
+      height:2px; background:var(--border); z-index:0;
+    }
+    .process-step { text-align:center; padding:1rem; position:relative; z-index:1; }
+    .step-num {
+      width:56px; height:56px; border-radius:50%;
+      background:var(--accent); display:flex; align-items:center; justify-content:center;
+      margin:0 auto 1.25rem;
+      font-family:var(--font-head); font-size:1.4rem; color:var(--white);
+      box-shadow:0 0 0 6px var(--surface);
+    }
+    .process-step h3 { margin-bottom:.4rem; }
+    .process-step p { font-size:.875rem; }
+
+    /* Projects */
+    .projects-filters {
+      display:flex; gap:.75rem; flex-wrap:wrap; margin-bottom:2.5rem;
+    }
+    .filter-btn {
+      padding:.4rem 1.1rem; border-radius:999px;
+      border:1.5px solid var(--border); background:transparent;
+      font-size:.82rem; font-weight:500; cursor:pointer; color:var(--ink-light);
+      transition:all .2s;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background:var(--accent); border-color:var(--accent); color:var(--white);
+    }
+    .projects-grid {
+      display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:1.5rem;
+    }
+    .project-card { border-radius:8px; overflow:hidden; border:1px solid var(--border); transition:transform .25s var(--ease); }
+    .project-card:hover { transform:translateY(-4px); }
+    .project-img { position:relative; height:210px; overflow:hidden; background:var(--accent-pale); }
+    .project-img img { width:100%; height:100%; object-fit:cover; transition:transform .4s; }
+    .project-card:hover .project-img img { transform:scale(1.04); }
+    .project-tag {
+      position:absolute; top:1rem; left:1rem;
+      background:var(--accent); color:var(--white);
+      font-size:.7rem; font-weight:700; padding:.28rem .7rem;
+      border-radius:999px; text-transform:uppercase; letter-spacing:.05em;
+    }
+    .project-body { padding:1.5rem; background:var(--white); }
+    .project-body h3 { margin-bottom:.4rem; font-size:1.05rem; }
+    .project-body p { font-size:.875rem; margin-bottom:.9rem; }
+    .project-meta { display:flex; gap:1.25rem; font-size:.78rem; color:var(--ink-light); font-family:var(--font-mono); }
+
+    /* Certs */
+    .certs-grid {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:1.25rem; text-align:center;
+    }
+    .cert-item {
+      padding:1.75rem 1rem; border:1px solid var(--border);
+      border-radius:8px; background:var(--white); transition:border-color .2s;
+    }
+    .cert-item:hover { border-color:var(--accent); }
+    .cert-badge {
+      width:60px; height:60px; background:var(--accent-pale);
+      border-radius:50%; display:flex; align-items:center; justify-content:center;
+      margin:0 auto 1rem;
+      font-family:var(--font-mono); font-size:.68rem; font-weight:700;
+      color:var(--accent); letter-spacing:.04em; text-align:center; line-height:1.3;
+    }
+    .cert-item h3 { font-size:.9rem; margin-bottom:.25rem; }
+    .cert-item p { font-size:.78rem; }
+
+    /* FAQ */
+    .faq-list { max-width:760px; margin:0 auto; }
+    .faq-item { border-bottom:1px solid var(--border); }
+    .faq-q {
+      width:100%; text-align:left; background:none; border:none; cursor:pointer;
+      padding:1.2rem 0; display:flex; justify-content:space-between; align-items:center;
+      font-size:.975rem; font-weight:600; color:var(--ink); font-family:var(--font-body);
+    }
+    .faq-icon {
+      width:24px; height:24px; flex-shrink:0;
+      border:2px solid var(--accent); border-radius:50%;
+      display:flex; align-items:center; justify-content:center;
+      color:var(--accent); font-size:1.1rem; transition:transform .3s, background .2s;
+    }
+    .faq-item.open .faq-icon { transform:rotate(45deg); background:var(--accent); color:var(--white); }
+    .faq-a { overflow:hidden; max-height:0; transition:max-height .35s ease; }
+    .faq-a-inner { padding:0 0 1.25rem; color:var(--ink-mid); font-size:.9rem; }
+
+    @media (max-width:640px) {
+      .process-steps::before { display:none; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ════ HEADER ════ -->
+  <header id="site-header" role="banner">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Primary navigation">
+        <a href="../index.html" class="logo-wrap" aria-label="Shri Karni Group home">
+          <span class="logo-main">Shri Karni <span>Group</span></span>
+          <span class="logo-sub">Infrastructure</span>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#clients">Clients</a></li>
+          <li><a href="../about/index.html">About Group</a></li>
+          <li><a href="../electrotech/index.html" class="nav-pill nav-pill-et">Electrotech</a></li>
+          <li><a href="../contact/index.html" class="btn btn-primary btn-sm">Contact Us</a></li>
+        </ul>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#process">Process</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#clients">Clients</a>
+      <a href="../about/index.html">About Group</a>
+      <div class="mob-divider">Other Entity</div>
+      <a href="../electrotech/index.html">Shri Karni Electrotech →</a>
+      <a href="../contact/index.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol>
+        <li><a href="../index.html">Shri Karni Group</a></li>
+        <li aria-current="page">Shri Karni Infrastructure</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section id="hero" aria-label="Shri Karni Infrastructure introduction">
+      <div class="container">
+        <div style="max-width:680px">
+          <span class="eyebrow" style="color:#81C784;">Shri Karni Group · Civil Division</span>
+          <h1>Airport Infrastructure Built for <em>Zero Compromise</em></h1>
+          <div class="hero-tags">
+            <span class="hero-tag">Runway Works</span>
+            <span class="hero-tag">Terminal Civil</span>
+            <span class="hero-tag">Taxiway & Apron</span>
+            <span class="hero-tag">Airside Drainage</span>
+            <span class="hero-tag">Perimeter Security</span>
+            <span class="hero-tag">AAI Registered</span>
+          </div>
+          <p class="lead">From runway resurfacing executed in overnight windows to full terminal civil packages — Shri Karni Infrastructure delivers airport-grade civil works with the discipline aviation demands.</p>
+          <div class="hero-ctas">
+            <a href="#projects" class="btn btn-primary">View Our Projects</a>
+            <a href="../contact/index.html" class="btn btn-ghost">Request a Tender Quote</a>
+          </div>
+        </div>
+      </div>
+      <div class="inf-stripe" aria-hidden="true"></div>
+      <div class="runway-stripe-deco" aria-hidden="true"></div>
+    </section>
+
+    <!-- STATS -->
+    <div style="padding:2rem 0; background:var(--white); border-bottom:1px solid var(--border);">
+      <div class="container">
+        <div class="stat-bar" data-reveal>
+          <div class="stat-bar-item">
+            <span class="stat-num" style="color:var(--inf-primary);">XX+</span>
+            <span class="stat-label">Airport Projects</span>
+          </div>
+          <div class="stat-bar-item">
+            <span class="stat-num" style="color:var(--inf-primary);">XX+</span>
+            <span class="stat-label">Tenders Completed</span>
+          </div>
+          <div class="stat-bar-item">
+            <span class="stat-num" style="color:var(--inf-primary);">XX+</span>
+            <span class="stat-label">Airports Served</span>
+          </div>
+          <div class="stat-bar-item">
+            <span class="stat-num" style="color:var(--inf-primary);">₹XXX Cr+</span>
+            <span class="stat-label">Project Value Delivered</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section id="services" class="section" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Our Services</span>
+          <h2 id="services-heading">Every Phase of Airport Civil Works</h2>
+          <hr class="gold-rule" aria-hidden="true" />
+          <p class="lead">Comprehensive civil contracting across the full airside and landside scope of airport infrastructure.</p>
+        </div>
+        <div class="services-grid">
+
+          <article class="service-card" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M2 18L22 18M5 18L5 8Q12 2 19 8L19 18"/></svg>
+            </div>
+            <h3>Runway Construction & Resurfacing</h3>
+            <p>Full-depth reclamation, flexible and rigid pavement overlays, shoulder widening, runway marking, and lighting trench works — executed within aircraft operations windows.</p>
+          </article>
+
+          <article class="service-card" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="1"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+            </div>
+            <h3>Terminal Civil Works</h3>
+            <p>Structural civil works for passenger terminals — ground slabs, drainage, utility trenching, exterior paving, and finishing to CPWD and AAI standards.</p>
+          </article>
+
+          <article class="service-card" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 12H21M3 6H21M3 18H21"/></svg>
+            </div>
+            <h3>Taxiway & Apron Construction</h3>
+            <p>High-load concrete and bituminous aprons and taxiways designed for wide-body aircraft, with precision PCN compliance and drainage integration.</p>
+          </article>
+
+          <article class="service-card" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <h3>Airside Drainage & Utilities</h3>
+            <p>Storm water drainage networks, box culverts, catch basins, fuel hydrant civil works, and underground utility laying including trenchless technology.</p>
+          </article>
+
+          <article class="service-card" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 6h16M4 12h16M4 18h7"/><path d="M15 15l6 6m-6 0l6-6"/></svg>
+            </div>
+            <h3>Perimeter Fencing & Security Roads</h3>
+            <p>Perimeter fencing, internal security roads, access control foundation works, and watchtower construction to BCAS and AAI specifications.</p>
+          </article>
+
+          <article class="service-card" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3>Ancillary Airport Buildings</h3>
+            <p>Civil works for ATC towers, equipment rooms, cargo sheds, fire stations, and other ancillary airport facilities under turnkey or package contracts.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section section--alt" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Our Work</span>
+          <h2 id="projects-heading">Selected Project Portfolio</h2>
+          <hr class="gold-rule" aria-hidden="true" />
+          <p class="lead">A sample of completed airport civil projects — replace with real project names, values, and photographs.</p>
+        </div>
+
+        <div data-filter-group>
+          <div class="projects-filters" role="group" aria-label="Filter by project type">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="runway">Runway</button>
+            <button class="filter-btn" data-filter="terminal">Terminal</button>
+            <button class="filter-btn" data-filter="taxiway">Taxiway & Apron</button>
+            <button class="filter-btn" data-filter="drainage">Drainage</button>
+          </div>
+
+          <div class="projects-grid">
+
+            <article class="project-card filterable" data-category="runway" data-reveal>
+              <div class="project-img">
+                <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&q=75" alt="Runway resurfacing project" loading="lazy" width="600" height="210"/>
+                <span class="project-tag">Runway</span>
+              </div>
+              <div class="project-body">
+                <h3>Runway Overlay — [Airport Name]</h3>
+                <p>Flexible pavement overlay with line marking and shoulder works. Delivered in nightly windows over [X] days.</p>
+                <div class="project-meta"><span>₹ XX Cr</span><span>[Year]</span><span>AAI Tender</span></div>
+              </div>
+            </article>
+
+            <article class="project-card filterable" data-category="terminal" data-reveal>
+              <div class="project-img">
+                <img src="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=600&q=75" alt="Terminal civil works" loading="lazy" width="600" height="210"/>
+                <span class="project-tag">Terminal</span>
+              </div>
+              <div class="project-body">
+                <h3>Terminal Expansion Civil Package — [Airport Name]</h3>
+                <p>Ground slab, drainage, exterior paving, and utility trenching for new terminal expansion. Full CPWD compliance.</p>
+                <div class="project-meta"><span>₹ XX Cr</span><span>[Year]</span><span>AAI Tender</span></div>
+              </div>
+            </article>
+
+            <article class="project-card filterable" data-category="taxiway" data-reveal>
+              <div class="project-img">
+                <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=600&q=75" alt="Apron construction" loading="lazy" width="600" height="210"/>
+                <span class="project-tag">Taxiway & Apron</span>
+              </div>
+              <div class="project-body">
+                <h3>Apron Expansion — [Airport Name]</h3>
+                <p>Concrete apron for [X] additional aircraft stands with fuel hydrant civil works and PCN compliance.</p>
+                <div class="project-meta"><span>₹ XX Cr</span><span>[Year]</span><span>AAI Tender</span></div>
+              </div>
+            </article>
+
+            <article class="project-card filterable" data-category="drainage" data-reveal>
+              <div class="project-img">
+                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=75" alt="Airside drainage works" loading="lazy" width="600" height="210"/>
+                <span class="project-tag">Drainage</span>
+              </div>
+              <div class="project-body">
+                <h3>Airfield Storm Drainage — [Airport Name]</h3>
+                <p>Box drain network, catch basins, and outfall structures for airside drainage improvement.</p>
+                <div class="project-meta"><span>₹ XX Cr</span><span>[Year]</span><span>AAI Tender</span></div>
+              </div>
+            </article>
+
+            <article class="project-card filterable" data-category="runway" data-reveal>
+              <div class="project-img">
+                <img src="https://images.unsplash.com/photo-1513836279014-a89f7d3bface?w=600&q=75" alt="Runway shoulder works" loading="lazy" width="600" height="210"/>
+                <span class="project-tag">Runway</span>
+              </div>
+              <div class="project-body">
+                <h3>Runway Shoulder Strengthening — [Airport Name]</h3>
+                <p>Granular sub-base and BM overlay for runway shoulder with drainage improvement and edge marking.</p>
+                <div class="project-meta"><span>₹ XX Cr</span><span>[Year]</span><span>AAI Tender</span></div>
+              </div>
+            </article>
+
+            <article class="project-card filterable" data-category="terminal" data-reveal>
+              <div class="project-img">
+                <img src="https://images.unsplash.com/photo-1599640842225-85d111c60e6b?w=600&q=75" alt="Passenger forecourt works" loading="lazy" width="600" height="210"/>
+                <span class="project-tag">Terminal</span>
+              </div>
+              <div class="project-body">
+                <h3>Passenger Forecourt — [Airport Name]</h3>
+                <p>Paving, landscaping, drain lining, and covered walkway foundations for upgraded passenger forecourt.</p>
+                <div class="project-meta"><span>₹ XX Cr</span><span>[Year]</span><span>AAI Tender</span></div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="section" aria-labelledby="process-heading">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <span class="eyebrow">How We Work</span>
+          <h2 id="process-heading">From Tender to Handover</h2>
+          <hr class="gold-rule gold-rule--center" aria-hidden="true" />
+          <p class="lead">A structured delivery process refined across every airport project we have completed.</p>
+        </div>
+        <div class="process-steps">
+          <div class="process-step" data-reveal>
+            <div class="step-num" aria-hidden="true">1</div>
+            <h3>Tender Analysis</h3>
+            <p>BOQ review, site assessment, and compliance checks before bidding — no surprises during execution.</p>
+          </div>
+          <div class="process-step" data-reveal>
+            <div class="step-num" aria-hidden="true">2</div>
+            <h3>Site Mobilisation</h3>
+            <p>Own equipment fleet mobilises within days. No critical dependency on external machinery hire.</p>
+          </div>
+          <div class="process-step" data-reveal>
+            <div class="step-num" aria-hidden="true">3</div>
+            <h3>Works Execution</h3>
+            <p>Night-window and shutdown execution coordinated with ATC and airport operations in real time.</p>
+          </div>
+          <div class="process-step" data-reveal>
+            <div class="step-num" aria-hidden="true">4</div>
+            <h3>QA & Testing</h3>
+            <p>In-house lab testing for CBR, compaction, and pavement quality per IRC and AAI specifications.</p>
+          </div>
+          <div class="process-step" data-reveal>
+            <div class="step-num" aria-hidden="true">5</div>
+            <h3>Handover & DLP</h3>
+            <p>Structured handover with as-built drawings, QA records, and full defect liability period support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="section section--alt" aria-labelledby="certs-heading">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <span class="eyebrow">Credentials</span>
+          <h2 id="certs-heading">Certified, Registered & Compliant</h2>
+          <hr class="gold-rule gold-rule--center" aria-hidden="true" />
+          <p class="lead">Every certification our clients need before issuing a work order — already in place.</p>
+        </div>
+        <div class="certs-grid" data-reveal>
+          <div class="cert-item">
+            <div class="cert-badge" aria-hidden="true">AAI</div>
+            <h3>AAI Registered</h3>
+            <p>Airports Authority of India registered civil contractor.</p>
+          </div>
+          <div class="cert-item">
+            <div class="cert-badge" aria-hidden="true">ISO</div>
+            <h3>ISO 9001:2015</h3>
+            <p>Quality management certified for civil construction.</p>
+          </div>
+          <div class="cert-item">
+            <div class="cert-badge" aria-hidden="true">CPWD</div>
+            <h3>CPWD Enlisted</h3>
+            <p>Central Public Works Department — civil works category.</p>
+          </div>
+          <div class="cert-item">
+            <div class="cert-badge" aria-hidden="true">DGCA</div>
+            <h3>DGCA Compliant</h3>
+            <p>Airside works executed to DGCA safety standards.</p>
+          </div>
+          <div class="cert-item">
+            <div class="cert-badge" aria-hidden="true">OHSAS</div>
+            <h3>OHSAS 18001</h3>
+            <p>Occupational health & safety management certified.</p>
+          </div>
+          <div class="cert-item">
+            <div class="cert-badge" aria-hidden="true">GST</div>
+            <h3>GST & PAN</h3>
+            <p>Fully compliant for government tender participation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENTS FULL LIST -->
+    <section id="clients" class="section" aria-labelledby="clients-heading">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <span class="eyebrow">Our Clients</span>
+          <h2 id="clients-heading">Infrastructure Client List</h2>
+          <hr class="gold-rule gold-rule--center" aria-hidden="true" />
+          <p class="lead">Airport authorities, government agencies, and private operators who have trusted Shri Karni Infrastructure.</p>
+        </div>
+        <div class="clients-grid" data-reveal>
+          <div class="client-grid-item">Client Name 1</div>
+          <div class="client-grid-item">Client Name 2</div>
+          <div class="client-grid-item">Client Name 3</div>
+          <div class="client-grid-item">Client Name 4</div>
+          <div class="client-grid-item">Client Name 5</div>
+          <div class="client-grid-item">Client Name 6</div>
+          <div class="client-grid-item">Client Name 7</div>
+          <div class="client-grid-item">Client Name 8</div>
+          <div class="client-grid-item">Client Name 9</div>
+          <div class="client-grid-item">Client Name 10</div>
+          <div class="client-grid-item">Client Name 11</div>
+          <div class="client-grid-item">Client Name 12</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section section--alt" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <span class="eyebrow">FAQ</span>
+          <h2 id="faq-heading">Common Questions</h2>
+          <hr class="gold-rule gold-rule--center" aria-hidden="true" />
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-inf-1">Is Shri Karni Infrastructure registered for AAI tenders?<span class="faq-icon" aria-hidden="true">+</span></button>
+            <div class="faq-a" id="faq-inf-1"><div class="faq-a-inner">Yes. Shri Karni Infrastructure is a registered civil contractor with the Airports Authority of India and has successfully completed multiple AAI tender-based projects.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-inf-2">Can you work within live airport operational hours?<span class="faq-icon" aria-hidden="true">+</span></button>
+            <div class="faq-a" id="faq-inf-2"><div class="faq-a-inner">Yes. All teams are trained for airside safety and night-window execution. We coordinate with ATC and airport operations directly to ensure zero disruption to flight schedules.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-inf-3">Do you handle both AAI and private airport tenders?<span class="faq-icon" aria-hidden="true">+</span></button>
+            <div class="faq-a" id="faq-inf-3"><div class="faq-a-inner">Yes. We have experience with AAI, GMR, Adani Airport tenders, and state civil aviation department projects. Our documentation and QA processes adapt to each client's requirements.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false" aria-controls="faq-inf-4">What is your geographic coverage?<span class="faq-icon" aria-hidden="true">+</span></button>
+            <div class="faq-a" id="faq-inf-4"><div class="faq-a-inner">We primarily operate across [Your Regions]. Larger projects in other regions are evaluated case by case based on scope and equipment mobilisation feasibility.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div style="background:linear-gradient(135deg,var(--inf-primary) 0%,#0A2E0C 100%); padding:4.5rem 0; text-align:center;">
+      <div class="container">
+        <span class="eyebrow" style="color:rgba(255,255,255,.6);">Work With Infrastructure</span>
+        <h2 style="color:var(--white); margin-bottom:.75rem;">Have an Airport Civil Project or Tender?</h2>
+        <p style="color:rgba(255,255,255,.65); max-width:46ch; margin:0 auto 2rem;">Reach out and our team will respond within one business day.</p>
+        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+          <a href="../contact/index.html" class="btn btn-primary" style="background:var(--white);color:var(--inf-primary);border-color:var(--white);">Send an Enquiry</a>
+          <a href="../electrotech/index.html" class="btn btn-ghost">View Electrotech →</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-wrap">
+            <span class="logo-main" style="color:var(--white)">Shri Karni <span style="color:var(--gold)">Group</span></span>
+            <span class="logo-sub">Infrastructure</span>
+          </div>
+          <p>Specialist airport civil contractor — runway, terminal, taxiway, and airside infrastructure works.</p>
+          <div class="footer-entities">
+            <a href="../index.html" class="footer-entity-badge et" style="color:rgba(255,255,255,.5);border-color:rgba(255,255,255,.15);">← Group Home</a>
+            <a href="../electrotech/index.html" class="footer-entity-badge et">Electrotech</a>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="mailto:info@shrikarnigroup.com" class="social-link" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Runway Works</a></li>
+            <li><a href="#services">Terminal Civil</a></li>
+            <li><a href="#services">Taxiway & Apron</a></li>
+            <li><a href="#services">Drainage</a></li>
+            <li><a href="#services">Perimeter Works</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#process">Our Process</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="../about/index.html">About Group</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="../contact/index.html">Send Enquiry</a></li>
+            <li><a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></li>
+            <li><a href="mailto:info@shrikarnigroup.com">info@shrikarnigroup.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="footer-year"></span> Shri Karni Infrastructure · Shri Karni Group of Companies.</span>
+        <div style="display:flex;gap:1.5rem;"><a href="../index.html">Group Home</a><a href="#">Privacy Policy</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../shared.js"></script>
+</body>
+</html>
