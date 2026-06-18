@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shri Karni Group of Companies | Electrotech & Infrastructure</title>
+  <meta name="description" content="Shri Karni Group of Companies comprises Shri Karni Electrotech and Shri Karni Infrastructure — delivering electrical, civil, and airport infrastructure works across India." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.shrikarnigroup.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Shri Karni Group of Companies" />
+  <meta property="og:description" content="Electrical contracting, civil infrastructure, and airport works — delivered by two specialist entities under one trusted group." />
+  <meta property="og:url" content="https://www.shrikarnigroup.com/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Shri Karni Group of Companies",
+    "url": "https://www.shrikarnigroup.com",
+    "description": "Parent group comprising Shri Karni Electrotech and Shri Karni Infrastructure.",
+    "address": { "@type": "PostalAddress", "addressCountry": "IN" },
+    "contactPoint": { "@type": "ContactPoint", "telephone": "+91-XXXXXXXXXX", "contactType": "customer service" },
+    "subOrganization": [
+      { "@type": "Organization", "name": "Shri Karni Electrotech", "url": "https://www.shrikarnigroup.com/electrotech/" },
+      { "@type": "Organization", "name": "Shri Karni Infrastructure", "url": "https://www.shrikarnigroup.com/infrastructure/" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="shared.css" />
+
+  <style>
+    /* ── HOME-SPECIFIC ── */
+    /* Hero */
+    #hero {
+      min-height: 100vh; padding-top: 70px;
+      background:
+        linear-gradient(150deg, rgba(26,26,46,.88) 0%, rgba(10,10,20,.80) 100%),
+        url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=80') center/cover no-repeat;
+      display: flex; align-items: center;
+      position: relative; overflow: hidden;
+    }
+    .hero-kicker {
+      display: inline-flex; align-items: center; gap: .6rem;
+      background: rgba(184,134,11,.15); border: 1px solid rgba(184,134,11,.35);
+      border-radius: 999px; padding: .35rem 1rem;
+      font-family: var(--font-mono); font-size: .7rem; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--gold-light);
+      margin-bottom: 1.5rem;
+    }
+    .hero-kicker-dot { width: 6px; height: 6px; background: var(--gold-light); border-radius: 50%; }
+    #hero h1 { color: var(--white); margin-bottom: 1.25rem; }
+    #hero h1 em { font-style: italic; color: var(--gold-light); }
+    #hero .lead { color: rgba(255,255,255,.72); margin-bottom: 2.5rem; }
+
+    /* Entity cards in hero */
+    .entity-cards {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;
+      margin-top: 3rem; max-width: 680px;
+    }
+    .entity-hero-card {
+      border-radius: 8px; padding: 1.75rem;
+      border: 1px solid; text-decoration: none;
+      transition: transform .25s var(--ease), box-shadow .25s;
+      position: relative; overflow: hidden;
+    }
+    .entity-hero-card::before {
+      content: ''; position: absolute; inset: 0;
+      opacity: 0; transition: opacity .3s;
+    }
+    .entity-hero-card:hover { transform: translateY(-4px); }
+    .entity-hero-card:hover::before { opacity: 1; }
+    .entity-hero-card.et {
+      background: rgba(0,71,171,.18);
+      border-color: rgba(0,71,171,.45);
+    }
+    .entity-hero-card.et::before { background: rgba(0,71,171,.1); }
+    .entity-hero-card.et:hover { box-shadow: 0 12px 32px rgba(0,71,171,.3); }
+    .entity-hero-card.inf {
+      background: rgba(27,94,32,.18);
+      border-color: rgba(27,94,32,.45);
+    }
+    .entity-hero-card.inf::before { background: rgba(27,94,32,.1); }
+    .entity-hero-card.inf:hover { box-shadow: 0 12px 32px rgba(27,94,32,.3); }
+    .ehc-tag {
+      font-family: var(--font-mono); font-size: .65rem;
+      letter-spacing: .14em; text-transform: uppercase;
+      margin-bottom: .6rem; display: block;
+    }
+    .et .ehc-tag { color: #7FB8FF; }
+    .inf .ehc-tag { color: #81C784; }
+    .ehc-name {
+      font-family: var(--font-head); font-size: 1.15rem;
+      color: var(--white); margin-bottom: .5rem; display: block;
+    }
+    .ehc-desc { font-size: .82rem; color: rgba(255,255,255,.6); margin-bottom: 1rem; }
+    .ehc-arrow {
+      font-size: .85rem; font-weight: 600; display: inline-flex; align-items: center; gap: .4rem;
+    }
+    .et .ehc-arrow { color: #7FB8FF; }
+    .inf .ehc-arrow { color: #81C784; }
+
+    /* Gold bottom border on hero */
+    .hero-rule {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      height: 4px; background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    /* Group intro */
+    .group-intro-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+    }
+    .group-intro-img {
+      position: relative; border-radius: 8px; overflow: hidden;
+    }
+    .group-intro-img img { width: 100%; height: 400px; object-fit: cover; }
+    .intro-badge {
+      position: absolute; bottom: 1.5rem; right: 1.5rem;
+      background: var(--gold); color: var(--white);
+      padding: .75rem 1.25rem; border-radius: var(--radius); text-align: center;
+    }
+    .intro-badge strong { font-family: var(--font-head); font-size: 1.6rem; display: block; line-height: 1; }
+    .intro-badge span { font-size: .72rem; opacity: .9; }
+
+    /* Entity section on homepage */
+    .entity-section {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+    }
+    .entity-panel {
+      border-radius: 10px; padding: 3rem 2.5rem;
+      position: relative; overflow: hidden; text-decoration: none;
+      transition: transform .25s var(--ease), box-shadow .25s;
+    }
+    .entity-panel:hover { transform: translateY(-5px); }
+    .entity-panel.et {
+      background: linear-gradient(135deg, #0D2B6E 0%, #0047AB 100%);
+    }
+    .entity-panel.et:hover { box-shadow: 0 20px 48px rgba(0,71,171,.35); }
+    .entity-panel.inf {
+      background: linear-gradient(135deg, #0A3210 0%, #1B5E20 100%);
+    }
+    .entity-panel.inf:hover { box-shadow: 0 20px 48px rgba(27,94,32,.35); }
+    .ep-eyebrow {
+      font-family: var(--font-mono); font-size: .68rem;
+      letter-spacing: .16em; text-transform: uppercase;
+      margin-bottom: .75rem; opacity: .7; color: var(--white);
+    }
+    .entity-panel h3 { font-family: var(--font-head); font-size: 1.6rem; color: var(--white); margin-bottom: .75rem; }
+    .entity-panel p { font-size: .875rem; color: rgba(255,255,255,.7); margin-bottom: 1.75rem; max-width: 36ch; }
+    .ep-services { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 2rem; }
+    .ep-service-tag {
+      padding: .25rem .75rem; border-radius: 999px;
+      font-size: .72rem; font-weight: 600; border: 1px solid rgba(255,255,255,.25);
+      color: rgba(255,255,255,.8);
+    }
+    .ep-cta {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .65rem 1.5rem; border-radius: var(--radius);
+      font-size: .85rem; font-weight: 600;
+      background: rgba(255,255,255,.15); color: var(--white);
+      border: 1px solid rgba(255,255,255,.3);
+      transition: background .2s;
+    }
+    .ep-cta:hover { background: rgba(255,255,255,.25); }
+    .ep-num {
+      position: absolute; bottom: -1rem; right: 1.5rem;
+      font-family: var(--font-head); font-size: 8rem;
+      color: rgba(255,255,255,.05); line-height: 1;
+      pointer-events: none; user-select: none;
+    }
+
+    /* Clients highlight strip */
+    .clients-section { background: var(--surface); }
+
+    /* Director message teaser */
+    .director-teaser {
+      background: var(--ink); color: var(--white);
+      padding: 5rem 0;
+    }
+    .director-teaser-grid {
+      display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: center;
+    }
+    .director-photo {
+      width: 100%; aspect-ratio: 3/4; object-fit: cover;
+      border-radius: 8px; border: 3px solid var(--gold);
+    }
+    .director-photo-placeholder {
+      width: 100%; aspect-ratio: 3/4;
+      background: rgba(255,255,255,.05);
+      border-radius: 8px; border: 3px solid var(--gold);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-head); font-size: 3rem; color: var(--gold);
+    }
+    .director-teaser blockquote {
+      font-family: var(--font-head); font-size: clamp(1.1rem, 2vw, 1.5rem);
+      line-height: 1.5; color: rgba(255,255,255,.88);
+      font-style: italic; margin-bottom: 1.5rem;
+      border-left: 3px solid var(--gold); padding-left: 1.5rem;
+    }
+    .director-name { font-weight: 700; color: var(--white); font-size: 1rem; }
+    .director-title { font-size: .825rem; color: rgba(255,255,255,.5); margin-top: .2rem; }
+
+    @media (max-width: 900px) {
+      .group-intro-grid { grid-template-columns: 1fr; }
+      .entity-section { grid-template-columns: 1fr; }
+      .entity-cards { grid-template-columns: 1fr; }
+      .director-teaser-grid { grid-template-columns: 1fr; }
+      .director-photo-placeholder { aspect-ratio: 1/1; max-width: 200px; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ════ HEADER ════ -->
+  <header id="site-header" role="banner">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Primary navigation">
+        <a href="index.html" class="logo-wrap" aria-label="Shri Karni Group home">
+          <span class="logo-main">Shri Karni <span>Group</span></span>
+          <span class="logo-sub">of Companies</span>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="#about-group">About</a></li>
+          <li><a href="#entities">Our Companies</a></li>
+          <li><a href="#clients">Clients</a></li>
+          <li><a href="about/index.html">Leadership</a></li>
+          <li><a href="electrotech/index.html" class="nav-pill nav-pill-et">Electrotech</a></li>
+          <li><a href="infrastructure/index.html" class="nav-pill nav-pill-inf">Infrastructure</a></li>
+          <li><a href="contact/index.html" class="btn btn-primary btn-sm">Contact Us</a></li>
+        </ul>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <a href="#about-group">About the Group</a>
+      <a href="#entities">Our Companies</a>
+      <a href="#clients">Clients</a>
+      <a href="about/index.html">Leadership & Policies</a>
+      <div class="mob-divider">Our Entities</div>
+      <a href="electrotech/index.html">Shri Karni Electrotech →</a>
+      <a href="infrastructure/index.html">Shri Karni Infrastructure →</a>
+      <a href="contact/index.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ════ HERO ════ -->
+    <section id="hero" aria-label="Group introduction">
+      <div class="container">
+        <div style="max-width:700px">
+          <div class="hero-kicker">
+            <span class="hero-kicker-dot" aria-hidden="true"></span>
+            Established Group · Trusted Since [Year]
+          </div>
+          <h1>Building India's Future — <em>One Discipline at a Time</em></h1>
+          <p class="lead">Shri Karni Group of Companies brings together specialist expertise in electrical contracting and civil infrastructure under one trusted name — delivering quality works for government and private clients across India.</p>
+          <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+            <a href="#entities" class="btn btn-primary">Explore Our Companies</a>
+            <a href="contact/index.html" class="btn btn-ghost">Get in Touch</a>
+          </div>
+          <div class="entity-cards">
+            <a href="electrotech/index.html" class="entity-hero-card et" aria-label="Visit Shri Karni Electrotech page">
+              <span class="ehc-tag">Electrical Works</span>
+              <span class="ehc-name">Shri Karni Electrotech</span>
+              <p class="ehc-desc">HT/LT systems, substation works, airport electrical, and industrial installations.</p>
+              <span class="ehc-arrow">Explore &#8594;</span>
+            </a>
+            <a href="infrastructure/index.html" class="entity-hero-card inf" aria-label="Visit Shri Karni Infrastructure page">
+              <span class="ehc-tag">Civil Works</span>
+              <span class="ehc-name">Shri Karni Infrastructure</span>
+              <p class="ehc-desc">Runway, terminal, taxiway, drainage, and airside civil infrastructure.</p>
+              <span class="ehc-arrow">Explore &#8594;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-rule" aria-hidden="true"></div>
+    </section>
+
+    <!-- ════ STATS ════ -->
+    <div style="padding:2rem 0; background:var(--white); border-bottom:1px solid var(--border);">
+      <div class="container">
+        <div class="stat-bar" data-reveal>
+          <div class="stat-bar-item">
+            <span class="stat-num">XX+</span>
+            <span class="stat-label">Years of Experience</span>
+          </div>
+          <div class="stat-bar-item">
+            <span class="stat-num">XX+</span>
+            <span class="stat-label">Projects Completed</span>
+          </div>
+          <div class="stat-bar-item">
+            <span class="stat-num">XX+</span>
+            <span class="stat-label">Satisfied Clients</span>
+          </div>
+          <div class="stat-bar-item">
+            <span class="stat-num">2</span>
+            <span class="stat-label">Specialist Entities</span>
+          </div>
+          <div class="stat-bar-item">
+            <span class="stat-num">Pan-India</span>
+            <span class="stat-label">Project Reach</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════ ABOUT GROUP ════ -->
+    <section id="about-group" class="section" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="group-intro-grid">
+          <div data-reveal>
+            <span class="eyebrow">About the Group</span>
+            <h2 id="about-heading">A Group Built on Specialisation, Not Diversification</h2>
+            <hr class="gold-rule" aria-hidden="true" />
+            <p class="lead" style="margin-bottom:1.25rem;">Shri Karni Group of Companies was founded with a clear philosophy — focus deeply on fewer domains rather than spread thin across many. This is reflected in two dedicated entities, each with its own certifications, equipment, and expertise.</p>
+            <p>From airport electrical systems to runway civil works, both entities operate independently while sharing the group's core values of quality, safety, and timely delivery.</p>
+            <div style="margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap;">
+              <a href="about/index.html" class="btn btn-outline">Director's Message & Policies</a>
+            </div>
+          </div>
+          <div class="group-intro-img" data-reveal>
+            <img
+              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
+              alt="Shri Karni Group project site — team at work"
+              width="800" height="400" loading="lazy"
+            />
+            <div class="intro-badge">
+              <strong>XX+</strong>
+              <span>Years Delivering Quality</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════ ENTITIES ════ -->
+    <section id="entities" class="section section--alt" aria-labelledby="entities-heading">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <span class="eyebrow">Our Companies</span>
+          <h2 id="entities-heading">Two Entities. One Standard of Excellence.</h2>
+          <hr class="gold-rule gold-rule--center" aria-hidden="true" />
+          <p class="lead">Each entity is independently registered, certified, and equipped — specialising in its own domain while backed by the group's shared reputation.</p>
+        </div>
+        <div class="entity-section">
+
+          <a href="electrotech/index.html" class="entity-panel et" aria-label="Learn more about Shri Karni Electrotech">
+            <p class="ep-eyebrow">Electrical Contracting</p>
+            <h3>Shri Karni Electrotech</h3>
+            <p>Specialist electrical contractor for HT/LT installations, substations, airport electrical systems, and industrial electrification projects.</p>
+            <div class="ep-services">
+              <span class="ep-service-tag">HT / LT Works</span>
+              <span class="ep-service-tag">Substation Erection</span>
+              <span class="ep-service-tag">Airport Electrical</span>
+              <span class="ep-service-tag">Industrial Wiring</span>
+              <span class="ep-service-tag">Earthing Systems</span>
+            </div>
+            <span class="ep-cta">View Electrotech &#8594;</span>
+            <span class="ep-num" aria-hidden="true">ET</span>
+          </a>
+
+          <a href="infrastructure/index.html" class="entity-panel inf" aria-label="Learn more about Shri Karni Infrastructure">
+            <p class="ep-eyebrow">Civil Infrastructure</p>
+            <h3>Shri Karni Infrastructure</h3>
+            <p>Airport and civil infrastructure contractor specialising in runway works, terminal construction, taxiways, drainage, and airside civil projects under AAI tenders.</p>
+            <div class="ep-services">
+              <span class="ep-service-tag">Runway Works</span>
+              <span class="ep-service-tag">Terminal Civil</span>
+              <span class="ep-service-tag">Taxiway & Apron</span>
+              <span class="ep-service-tag">Drainage Systems</span>
+              <span class="ep-service-tag">Perimeter Works</span>
+            </div>
+            <span class="ep-cta">View Infrastructure &#8594;</span>
+            <span class="ep-num" aria-hidden="true">IN</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════ DIRECTOR TEASER ════ -->
+    <section class="director-teaser" aria-labelledby="director-heading">
+      <div class="container">
+        <div class="director-teaser-grid">
+          <div data-reveal>
+            <div class="director-photo-placeholder" role="img" aria-label="Director photograph placeholder">✦</div>
+          </div>
+          <div data-reveal>
+            <span class="eyebrow" style="color:var(--gold);">Director's Message</span>
+            <h2 id="director-heading" style="color:var(--white); margin-bottom:1.5rem;">A Word From Our Leadership</h2>
+            <blockquote>
+              "Our work is defined not just by what we build, but by the trust we earn — from clients, from regulators, and from the communities our infrastructure serves. At Shri Karni Group, we hold ourselves to standards that go beyond contract specifications."
+            </blockquote>
+            <div class="director-name">[Director Name]</div>
+            <div class="director-title">Managing Director, Shri Karni Group of Companies</div>
+            <a href="about/index.html#directors-message" class="btn btn-ghost" style="margin-top:1.75rem;">Read Full Message</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════ CLIENTS HIGHLIGHT ════ -->
+    <section id="clients" class="section clients-section" aria-labelledby="clients-heading">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <span class="eyebrow">Our Clients</span>
+          <h2 id="clients-heading">Trusted by Leading Organisations</h2>
+          <hr class="gold-rule gold-rule--center" aria-hidden="true" />
+          <p class="lead">A combined highlight of clients served across both Shri Karni Electrotech and Shri Karni Infrastructure. Visit each entity page for their full client list.</p>
+        </div>
+        <div class="clients-strip" data-reveal aria-label="Clients marquee">
+          <div class="clients-track" aria-hidden="true">
+            <div class="client-logo-item">Client Name 1</div>
+            <div class="client-logo-item">Client Name 2</div>
+            <div class="client-logo-item">Client Name 3</div>
+            <div class="client-logo-item">Client Name 4</div>
+            <div class="client-logo-item">Client Name 5</div>
+            <div class="client-logo-item">Client Name 6</div>
+            <div class="client-logo-item">Client Name 7</div>
+            <div class="client-logo-item">Client Name 8</div>
+            <div class="client-logo-item">Client Name 9</div>
+            <div class="client-logo-item">Client Name 10</div>
+          </div>
+        </div>
+        <div style="text-align:center; margin-top:2.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+          <a href="electrotech/index.html#clients" class="btn btn-outline" style="--accent:var(--et-primary);">Electrotech Clients</a>
+          <a href="infrastructure/index.html#clients" class="btn btn-outline" style="--accent:var(--inf-primary);">Infrastructure Clients</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════ CTA ════ -->
+    <div style="background:linear-gradient(135deg,#1A1A2E 0%,#2D2D50 100%); padding:4.5rem 0; text-align:center;">
+      <div class="container">
+        <span class="eyebrow">Work With Us</span>
+        <h2 style="color:var(--white); margin-bottom:.75rem;">Have a Project or Tender to Discuss?</h2>
+        <p style="color:rgba(255,255,255,.65); max-width:48ch; margin:0 auto 2rem;">Whether it's an electrical installation or civil infrastructure project — reach out and we'll connect you with the right entity.</p>
+        <a href="contact/index.html" class="btn btn-primary">Get in Touch</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ════ FOOTER ════ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-wrap">
+            <span class="logo-main" style="color:var(--white)">Shri Karni <span style="color:var(--gold)">Group</span></span>
+            <span class="logo-sub">of Companies</span>
+          </div>
+          <p>Specialist electrical and civil infrastructure contracting — delivered with integrity across India.</p>
+          <div class="footer-entities">
+            <a href="electrotech/index.html" class="footer-entity-badge et">Electrotech</a>
+            <a href="infrastructure/index.html" class="footer-entity-badge inf">Infrastructure</a>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#" class="social-link" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+            <a href="mailto:info@shrikarnigroup.com" class="social-link" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Our Entities</h4>
+          <ul>
+            <li><a href="electrotech/index.html">Shri Karni Electrotech</a></li>
+            <li><a href="infrastructure/index.html">Shri Karni Infrastructure</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about/index.html">About the Group</a></li>
+            <li><a href="about/index.html#directors-message">Director's Message</a></li>
+            <li><a href="about/index.html#vision-mission">Vision & Mission</a></li>
+            <li><a href="about/index.html#policies">Policies</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact/index.html">Enquiry Form</a></li>
+            <li><a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></li>
+            <li><a href="mailto:info@shrikarnigroup.com">info@shrikarnigroup.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="footer-year"></span> Shri Karni Group of Companies. All rights reserved.</span>
+        <div style="display:flex;gap:1.5rem;"><a href="#">Privacy Policy</a><a href="#">Sitemap</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="shared.js"></script>
+</body>
+</html>
